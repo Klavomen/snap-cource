@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="hydrodem.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -82,23 +82,6 @@
 <li class="chapter" data-level="1" data-path="map-topo.html"><a href="map-topo.html"><i class="fa fa-check"></i><b>1</b> Создание топографического плана</a><ul>
 <li class="chapter" data-level="1.1" data-path="map-topo.html"><a href="map-topo.html#map-topo-csv-table-reading"><i class="fa fa-check"></i><b>1.1</b> Чтение CSV-таблиц</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="hydrodem.html"><a href="hydrodem.html"><i class="fa fa-check"></i><b>2</b> Гидрологическое моделирование на основе ЦМР</a><ul>
-<li class="chapter" data-level="2.1" data-path="hydrodem.html"><a href="hydrodem.html#hydrodem-intro"><i class="fa fa-check"></i><b>2.1</b> Введение</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="hydrodem.html"><a href="hydrodem.html#hydrodem-control"><i class="fa fa-check"></i><b>2.1.1</b> Контрольный лист</a></li>
-<li class="chapter" data-level="2.1.2" data-path="hydrodem.html"><a href="hydrodem.html#hydrodem-annotation"><i class="fa fa-check"></i><b>2.1.2</b> Аннотация</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="hydrodem.html"><a href="hydrodem.html#hydrodem-init"><i class="fa fa-check"></i><b>2.2</b> Получение и подготовка исходных данных</a></li>
-<li class="chapter" data-level="2.3" data-path="hydrodem.html"><a href="hydrodem.html#hydrodem-preprocessing"><i class="fa fa-check"></i><b>2.3</b> Гидрологическая коррекция ЦМР</a></li>
-<li class="chapter" data-level="2.4" data-path="hydrodem.html"><a href="hydrodem.html#hydrodem-flowacc"><i class="fa fa-check"></i><b>2.4</b> Расчёт водосборной площади</a></li>
-<li class="chapter" data-level="2.5" data-path="hydrodem.html"><a href="hydrodem.html#hydrodem-basin"><i class="fa fa-check"></i><b>2.5</b> Определение границ бассейна р. Оскол</a></li>
-</ul></li>
-<li class="appendix"><span><b>Справочные сведения</b></span></li>
-<li class="chapter" data-level="A" data-path="manual-catalog.html"><a href="manual-catalog.html"><i class="fa fa-check"></i><b>A</b> Форматы пространственных данных</a><ul>
-<li class="chapter" data-level="A.1" data-path="manual-catalog.html"><a href="manual-catalog.html#шейп-файлы"><i class="fa fa-check"></i><b>A.1</b> Шейп-файлы</a></li>
-<li class="chapter" data-level="A.2" data-path="manual-catalog.html"><a href="manual-catalog.html#geopackage"><i class="fa fa-check"></i><b>A.2</b> GeoPackage</a></li>
-<li class="chapter" data-level="A.3" data-path="manual-catalog.html"><a href="manual-catalog.html#базы-геоданных-esri"><i class="fa fa-check"></i><b>A.3</b> Базы геоданных ESRI</a></li>
-</ul></li>
-<li class="chapter" data-level="B" data-path="mastertest.html"><a href="mastertest.html"><i class="fa fa-check"></i><b>B</b> Инструкция по регистрации в системе Мастер-тест</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -127,11 +110,14 @@
 QGIS может читать данные в разном формате: векторном, растровом, табличном и других.</p>
 <ol style="list-style-type: decimal">
 <li><p>Подготовьте таблицу формата CSV, где будут содержаться данные по каждому пикету тахеометрии.</p></li>
-<li><p>Все инструменты для чтения различных форматов данных стандартно расположены на панели слева (рисунок 1). Для чтения CSV-таблицы используйте иконку в виде запятой.
-<img src="images/Ref01/Open_data.png" alt="Инструменты перемещения по карте" /></p>
-<blockquote>
-<p>Примечание: Если у вас такой панели не оказалось, это значит, что она отключена. Для включения панели щелкните правой кнопкой мыши по пустому месту на панели и найдите <strong>панель работы со слоями</strong>.</p>
-</blockquote></li>
+<li><p>Все инструменты для чтения различных форматов данных стандартно расположены на панели слева (рисунок 1). Для чтения CSV-таблицы используйте иконку в виде запятой.</p></li>
+</ol>
+<div class="figure">
+<img src="images/Ref01/Open_data.png" alt="" />
+<p class="caption">Инструменты перемещения по карте</p>
+</div>
+<pre><code>&gt; Примечание: Если у вас такой панели не оказалось, это значит, что она отключена. Для включения панели щелкните правой кнопкой мыши по пустому месту на панели и найдите **панель работы со слоями**.</code></pre>
+<ol start="4" style="list-style-type: decimal">
 <li><p>В открывшемся окне Менеджера источников данных | Delimited Text укажите путь к CSV-файлу. В разделе Формат файла выберите или пропишите разделитель колонок в файле. Если разделитель указан верно, внизу в окошке предпросмотра (Примеры данных) вы увидите данные ячеек, разнесенные по соответствующим колонкам. При необходимости, если в текстовых полях вы видите непонятные символы, поменяйте кодировку (обычно это либо UTF-8, либо windows-1251).</p></li>
 <li><p>В разделе Geometry Definition мы указываем поле с геометрией объекта. Если файл CSV содержит координаты X и Y точек, то необходимо их выбрать их соответствующее название из выпадающего списка напротив X field и Y field. Обращаем ваше внимание на то, что в QGIS, как и во всех ГИС-пакетах, реализована правая декартова система координат, то есть x (easting) – направлен на восток, y (northing) направлен на север. Ваши исходные данные могут быть с по иному заданными осями.</p></li>
 <li><p>В окошке Система координат геометрии необходимо указать правильную систему координат, в которую изначально подразумеваются ваши исходные данные. Если неправильно задать систему координат, объекты окажутся не в том месте, где хотелось бы их видеть.
@@ -155,8 +141,8 @@ QGIS может читать данные в разном формате: век
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="hydrodem.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -206,20 +192,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
