@@ -3,22 +3,22 @@
     "path": "F:/GitHub/Cartography/Ref01_ReadCSV.Rmd",
     "project_path": "Ref01_ReadCSV.Rmd",
     "type": "r_markdown",
-    "hash": "4269069633",
+    "hash": "3541115617",
     "contents": "",
     "dirty": false,
     "created": 1600778811997.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
-        "cursorPosition": "46,0",
-        "scrollLine": "25"
+        "cursorPosition": "97,293",
+        "scrollLine": "76"
     },
     "folds": "",
-    "lastKnownWriteTime": 1601060653,
+    "lastKnownWriteTime": 1601061680,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1601060653307,
+    "last_content_update": 1601061681023,
     "read_only": false,
     "read_only_alternatives": []
 }
