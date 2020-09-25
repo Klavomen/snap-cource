@@ -3,22 +3,22 @@
     "path": "F:/GitHub/Cartography/Ex01_MapGeneral.Rmd",
     "project_path": "Ex01_MapGeneral.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "4170726982",
     "contents": "",
     "dirty": false,
     "created": 1600778811997.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
-        "cursorPosition": "93,0",
-        "scrollLine": "78"
+        "cursorPosition": "5,44",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1600779443,
+    "lastKnownWriteTime": 1601051158,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1600779443470,
+    "last_content_update": 1601051158794,
     "read_only": false,
     "read_only_alternatives": []
 }
