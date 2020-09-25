@@ -1,13 +1,9 @@
-book_filename: "qgis-course"
-chapter_name: "Упражнение "
+book_filename: "cartography-course"
+chapter_name: "Справка "
 output_dir: docs
 rmd_files:
     - "index.Rmd"
-    - "Ex01_MapGeneral.Rmd"
-    - "Ex02_MapQuaternary.Rmd"
-    - "Ex05_RefAdm.Rmd"
-    - "Ex06_VectorOverlay.Rmd"
-    - "Ex12_RasterOverlay.Rmd"
+    - "Ref01_ReadCSV.Rmd"
     - "Ex13_HydroDEM.Rmd"
     - "Man00_DataFormats.Rmd"
     - "instruction.Rmd"
