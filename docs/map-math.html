@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Картография: практикум в QGIS</title>
-  <meta name="description" content="Картография: практикум в QGIS" />
+  <title>Справка 2 Математическая основа карт | Картография: практикум в QGIS</title>
+  <meta name="description" content="Справка 2 Математическая основа карт | Картография: практикум в QGIS" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Картография: практикум в QGIS" />
+  <meta property="og:title" content="Справка 2 Математическая основа карт | Картография: практикум в QGIS" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Картография: практикум в QGIS" />
+  <meta property="og:description" content="Справка 2 Математическая основа карт | Картография: практикум в QGIS" />
   <meta name="github-repo" content="iowq750/cartography" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Картография: практикум в QGIS" />
+  <meta name="twitter:title" content="Справка 2 Математическая основа карт | Картография: практикум в QGIS" />
   
-  <meta name="twitter:description" content="Картография: практикум в QGIS" />
+  <meta name="twitter:description" content="Справка 2 Математическая основа карт | Картография: практикум в QGIS" />
   
 
 <meta name="author" content="Карпачевский А.М." />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="map-topo.html"/>
 
-<link rel="next" href="map-topo.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -109,49 +109,49 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Картография: практикум в QGIS</h1>
-<p class="author"><em>Карпачевский А.М.</em></p>
-<p class="date"><em>2020-09-26</em></p>
+<div id="map-math" class="section level1">
+<h1><span class="header-section-number">Справка 2</span> Математическая основа карт</h1>
+<div id="map-math-links" class="section level2">
+<h2><span class="header-section-number">2.1</span> Полезные ссылки</h2>
+<ol style="list-style-type: decimal">
+<li><p><a href="projections.mgis.psu.edu">Interactive Album of Map Projections 2.0</a></p></li>
+<li><p><a href="jasondavies.com/maps/transition/">Map Projection Transitions</a></p></li>
+<li><p><a href="projectionwizard.org/#">Projection Wizard</a></p></li>
+</ol>
 </div>
-<div id="программное-обеспечение-для-работы" class="section level1 unnumbered">
-<h1>Программное обеспечение для работы</h1>
-<p>Для работы вам потребуется скачать и установить на свои компьютеры геоинформационное приложение QGIS. Это свободно распространяемое программное обеспечение, для его установки не требуется покупка или регистрация.</p>
-<div id="windows" class="section level2 unnumbered">
-<h2>Windows</h2>
-<p>Скачайте с официального сайта последнюю стабильную версию QGIS (3.10). Выберите версию в зависимости от разрядности вашей системы: <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.10.3-3-Setup-x86_64.exe">64 bit</a>, <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.10.3-3-Setup-x86.exe">32 bit</a>.</p>
-<p>Когда исполняемый файл загрузится, запустите его. Если потребуется, разрешите приложению вносить изменения на вашем устройстве.</p>
-<p>Будет показано приветственное окно мастера установки.</p>
-<p><img src="images/installation_instruction_win/win01.png" /></p>
-<p>Нажмите «Далее», чтобы перейти на следующий шаг</p>
-<p>На следующем шаге будет показано лицензионное соглашение QGIS и другого программного обеспечения, входящего в пакет поставки.</p>
-<p><img src="images/installation_instruction_win/win02.png" /></p>
-<p>Нажмите «Принимаю».</p>
-<p>На следующем шаге выберите папку для установки. По возможности используйте расположение, предлагаемое по умолчанию.</p>
-<p><img src="images/installation_instruction_win/win03.png" /></p>
-<p>На следующем шаге предлагается выбрать дополнительные компоненты для установки. Снимите все флажки, кроме QGIS, и нажмите «Установить»</p>
-<p><img src="images/installation_instruction_win/win04.png" /></p>
-<p>После окончания установки ярлыки QGIS будут добавлены в меню “Пуск” и в отдельную папку QGIS на рабочем столе.</p>
-<p><img src="images/installation_instruction_win/win05.png" /></p>
+<div id="исходные-данные" class="section level2">
+<h2><span class="header-section-number">2.2</span> Исходные данные</h2>
+<p>ссыль</p>
 </div>
-<div id="macos" class="section level2 unnumbered">
-<h2>macOS</h2>
-<p>По состоянию на 2020-09-26 для прохождения практикума рекомендуется использовать альтернативную сборку версии <a href="https://www.kyngchaos.com/files/software/qgis/QGIS-macOS-3.4.12-1.dmg">3.4.12</a>. Перейдя по ссылке, необходимо согласиться сохранить образ установочного диска на компьютер (можно разрешить его сразу открыть средствами <em>DiskImageMounter</em>):</p>
-<p><img src="images/installation_instruction_mac/mac01.png" /></p>
-<p>После того как образ загрузится и будет открыт, необходимо последовательно запустить три установщика, выделенные на снимке экрана ниже (именно в том порядке, в котором они пронумерованы!):</p>
-<p><img src="images/installation_instruction_mac/mac02.png" /></p>
-<p>Установщики <strong>GDAL Complete</strong> и <strong>QGIS 3 LTR</strong> необходимо запускать через контекстное меню и выбирать пункт “Открыть”:</p>
-<p><img src="images/installation_instruction_mac/mac03.png" /></p>
-<p>В появившемся диалоговом окне необходимо нажать “Открыть”, чтобы разрешить установку:</p>
-<p><img src="images/installation_instruction_mac/mac04.png" /></p>
-<p>Все опции при установке каждой компоненты приложения оставляйте по умолчанию, ничего не меняйте и нажимайте в диалоговых окнах “Продолжить”, пока не запустится установщик.</p>
-<p>После того как последняя компонента — <strong>QGIS</strong> — будет установлена, вы сможете найти приложение и запустить его из каталога <em>Программы</em> macOS:</p>
-<p><img src="images/installation_instruction_mac/mac05.png" /></p>
+<div id="map-math-interface" class="section level2">
+<h2><span class="header-section-number">2.3</span> Интерфейс QGIS</h2>
+<p><a href="map-math.html#map-math">В начало справки ⇡</a></p>
+<div class="figure">
+<img src="images/Ref01/Open_data.png" alt="" />
+<p class="caption">Панель менеджера источника данных</p>
 </div>
-<div id="linux" class="section level2 unnumbered">
-<h2>Linux</h2>
-<p>Воспользуйтесь инструкциями по <a href="https://qgis.org/ru/site/forusers/alldownloads.html#linux">этой ссылке</a>.</p>
-<p>Дополнительную информацию по установке можно найти на <a href="https://qgis.org/ru/site/forusers/download.html">https://qgis.org/ru/site/forusers/download.html</a>.</p>
+<pre><code>&gt; Примечание: Если у вас такой панели не оказалось, это значит, что она
+отключена. Для включения панели щелкните правой кнопкой мыши по пустому
+месту на панели и найдите **панель работы со слоями**.</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>В открывшемся окне <strong>Менеджер источников данных | Delimited Text</strong> укажите путь к CSV-файлу. В разделе Формат файла выберите или пропишите разделитель колонок в файле. Если</li>
+</ol>
+<p><strong>Сохраните проект.</strong></p>
+</div>
+<div id="map-topo-crs" class="section level2">
+<h2><span class="header-section-number">2.4</span> Системы координат</h2>
+<p><a href="map-math.html#map-math">В начало справки ⇡</a></p>
+</div>
+<div id="map-topo-distortions" class="section level2">
+<h2><span class="header-section-number">2.5</span> Искажения картографических проекций</h2>
+<p><a href="map-math.html#map-math">В начало справки ⇡</a></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><em>Карпачевский А.М.</em> <strong>Картография: практикум в QGIS</strong>. М.: Географический факультет МГУ, 2020.</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -160,8 +160,8 @@
           </div>
         </div>
       </div>
+<a href="map-topo.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="map-topo.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

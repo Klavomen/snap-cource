@@ -4,6 +4,7 @@ output_dir: docs
 rmd_files:
     - "index.Rmd"
     - "Ref01_ReadCSV.Rmd"
+    - "Ref02_MathMap.Rmd"
 delete_merged_file: true
 language:
   label:
