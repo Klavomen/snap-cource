@@ -3,8 +3,9 @@ chapter_name: "Справка "
 output_dir: docs
 rmd_files:
     - "index.Rmd"
-    - "Ref01_ReadCSV.Rmd"
+    - "Ref01_Topo.Rmd"
     - "Ref02_MathMap.Rmd"
+    - "Ref04_MapCreate.Rmd"
 delete_merged_file: true
 language:
   label:
