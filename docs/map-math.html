@@ -91,8 +91,11 @@
 <li class="chapter" data-level="2.6" data-path="map-math.html"><a href="map-math.html#map-math-tissot"><i class="fa fa-check"></i><b>2.6</b> Построение эллипсов искажения в QGIS</a></li>
 <li class="chapter" data-level="2.7" data-path="map-math.html"><a href="map-math.html#map-math-layout"><i class="fa fa-check"></i><b>2.7</b> Работа с компоновкой в QGIS</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="map-create.html"><a href="map-create.html"><i class="fa fa-check"></i><b>3</b> Создание географической карты</a><ul>
-<li class="chapter" data-level="3.1" data-path="map-create.html"><a href="map-create.html#map-create-database"><i class="fa fa-check"></i><b>3.1</b> Создание БД</a></li>
+<li class="chapter" data-level="3" data-path="map-create.html"><a href="map-create.html"><i class="fa fa-check"></i><b>3</b> Способы изображения и графические средства</a><ul>
+<li class="chapter" data-level="3.1" data-path="map-create.html"><a href="map-create.html#map-symbology"><i class="fa fa-check"></i><b>3.1</b> Способы изображения</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="map-create-new.html"><a href="map-create-new.html"><i class="fa fa-check"></i><b>4</b> Создание географической карты</a><ul>
+<li class="chapter" data-level="4.1" data-path="map-create-new.html"><a href="map-create-new.html#map-create-new-database"><i class="fa fa-check"></i><b>4.1</b> Создание БД</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -145,6 +148,7 @@
 <p class="caption">Окно свойств проекта</p>
 </div>
 <p>В свойствах проекта можно менять, например, систему координат. <strong>Обратите внимание, от изменения системы координат проекта система координат слоёв в этом проекте не поменяются</strong>. Программное обеспечение умеет на лету перепроецировать слои в разных системах координат, поэтому мы их в проекте можем видеть вместе (если, конечно, данные в них на одну территорию).</p>
+<p>Для навигации по окну карты используйте панель инструментов перемещения по карте <img src="images/Ref02/Navigation_panel.png" />. Среди них есть инструменты изменения масштаба, перемещения, показа карты в экстенте (полный охват).</p>
 </div>
 <div id="map-math-crs" class="section level2">
 <h2><span class="header-section-number">2.4</span> Системы координат</h2>
@@ -258,6 +262,13 @@ PROJCRS[&quot;World_Miller_Cylindrical&quot;,
 <p class="caption">Окно для построения эллипсов искажений</p>
 </div>
 <p>В разделе <strong>Extent</strong> мы указываем охват, в пределах которого строятся эллипсы. В разделе <strong>Resolution</strong> указывается шаг частоты индикатрис по широте и долготе в градусах. В разделе <strong>Radius of the caps</strong> указывается радиус эллипса либо в градусах, либо в километрах. Параметры <strong>a</strong> и <strong>b</strong> – это полуоси эллипсоида. Кнопка <strong>Run</strong> запускает построение эллипсов искажений и сетки меридианов и параллелей.</p>
+<p>Для оценки параметров искажений в конкретных узлах градусной сетки на примере эллипсов искажений можно использовать соответствующие инструменты. Измерения в QGIS осуществляются с помощью инструмента линейки <img src="images/Ref02/Measure.png" />. Он находится на панели атрибутов <img src="images/Ref02/Attribute_panel.png" />. Там же можно выбрать инструмент для измерения углов <img src="images/Ref02/Measure_angle.png" />. При измерении длин появляется окно, где показаны настройки измерений.</p>
+<div class="figure">
+<img src="images/Ref02/Measure_window.png" alt="" />
+<p class="caption">Окно измерений</p>
+</div>
+<p>Для измерения в проекции необходимо выбрать пункт <strong>Прямоугольный</strong>. Построение ломаной линии осуществляется нажатием левой кнопки мыши. Закончить сегмент можно правой кнопкой мыши.</p>
+<p>Для удобства измерений можно включить инструмент прилипания, расположенные на одноименной панели. Прилипание (snapping) – это притягивание узлов рисуемой пользователем линии к уже существующим объектам. Для включения прилипания нажмите на кнопку магнита <img src="images/Ref02/Snapping.png" />. На этой же панели можно настроить прилипание, например, к местам пересечения объектов <img src="images/Ref02/Snap_intersection.png" />.</p>
 </div>
 <div id="map-math-layout" class="section level2">
 <h2><span class="header-section-number">2.7</span> Работа с компоновкой в QGIS</h2>
@@ -279,10 +290,6 @@ PROJCRS[&quot;World_Miller_Cylindrical&quot;,
 <p class="caption">Настройка сетки координат</p>
 </div>
 <p>В разделе <strong>Draw Coordinates</strong> можно настроить ориентировку подписей выходов сетки и другие параметры.</p>
-<div class="figure">
-<img src="images/Ref01/Draw_coordinates.png" alt="" />
-<p class="caption">Настройка отображения подписей координат</p>
-</div>
 <p>В свойствах карты включите опцию Рамка. Настройте её ширину.</p>
 <div class="figure">
 <img src="images/Ref01/Border.png" alt="" />
