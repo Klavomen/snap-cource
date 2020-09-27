@@ -3,22 +3,22 @@
     "path": "F:/GitHub/Cartography/Ref02_MathMap.Rmd",
     "project_path": "Ref02_MathMap.Rmd",
     "type": "r_markdown",
-    "hash": "750430898",
+    "hash": "2066126882",
     "contents": "",
     "dirty": false,
     "created": 1600778811997.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
-        "cursorPosition": "48,302",
-        "scrollLine": "34"
+        "cursorPosition": "216,43",
+        "scrollLine": "188"
     },
     "folds": "",
-    "lastKnownWriteTime": 1601152028,
+    "lastKnownWriteTime": 1601226488,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1601152028229,
+    "last_content_update": 1601226488105,
     "read_only": false,
     "read_only_alternatives": []
 }

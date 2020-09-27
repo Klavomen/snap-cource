@@ -24,7 +24,7 @@
 <meta name="author" content="Карпачевский А.М." />
 
 
-<meta name="date" content="2020-09-26" />
+<meta name="date" content="2020-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -84,10 +84,12 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="map-math.html"><a href="map-math.html"><i class="fa fa-check"></i><b>2</b> Математическая основа карт</a><ul>
 <li class="chapter" data-level="2.1" data-path="map-math.html"><a href="map-math.html#map-math-links"><i class="fa fa-check"></i><b>2.1</b> Полезные ссылки</a></li>
-<li class="chapter" data-level="2.2" data-path="map-math.html"><a href="map-math.html#исходные-данные"><i class="fa fa-check"></i><b>2.2</b> Исходные данные</a></li>
+<li class="chapter" data-level="2.2" data-path="map-math.html"><a href="map-math.html#map-math-initial-data"><i class="fa fa-check"></i><b>2.2</b> Исходные данные</a></li>
 <li class="chapter" data-level="2.3" data-path="map-math.html"><a href="map-math.html#map-math-interface"><i class="fa fa-check"></i><b>2.3</b> Интерфейс QGIS</a></li>
-<li class="chapter" data-level="2.4" data-path="map-math.html"><a href="map-math.html#map-topo-crs"><i class="fa fa-check"></i><b>2.4</b> Системы координат</a></li>
-<li class="chapter" data-level="2.5" data-path="map-math.html"><a href="map-math.html#map-topo-distortions"><i class="fa fa-check"></i><b>2.5</b> Искажения картографических проекций</a></li>
+<li class="chapter" data-level="2.4" data-path="map-math.html"><a href="map-math.html#map-math-crs"><i class="fa fa-check"></i><b>2.4</b> Системы координат</a></li>
+<li class="chapter" data-level="2.5" data-path="map-math.html"><a href="map-math.html#map-math-distortions"><i class="fa fa-check"></i><b>2.5</b> Искажения картографических проекций</a></li>
+<li class="chapter" data-level="2.6" data-path="map-math.html"><a href="map-math.html#map-math-tissot"><i class="fa fa-check"></i><b>2.6</b> Построение эллипсов искажения в QGIS</a></li>
+<li class="chapter" data-level="2.7" data-path="map-math.html"><a href="map-math.html#map-math-layout"><i class="fa fa-check"></i><b>2.7</b> Работа с компоновкой в QGIS</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="map-create.html"><a href="map-create.html"><i class="fa fa-check"></i><b>3</b> Создание географической карты</a><ul>
 <li class="chapter" data-level="3.1" data-path="map-create.html"><a href="map-create.html#map-create-database"><i class="fa fa-check"></i><b>3.1</b> Создание БД</a></li>
@@ -325,6 +327,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
