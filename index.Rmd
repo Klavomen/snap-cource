@@ -15,9 +15,9 @@ mainfont: PT Serif
 toc_float:
   collapse: section
   smooth_scroll: true
-apple-touch-icon: "apple-touch-icon.png"
+apple-touch-icon: images/apple-touch-icon.png
 apple-touch-icon-size: 120
-favicon: "favicon.ico"
+favicon: images/favicon.ico
 ---
 
 
