@@ -24,13 +24,13 @@
 <meta name="author" content="Карпачевский А.М." />
 
 
-<meta name="date" content="2020-09-27" />
+<meta name="date" content="2020-10-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="map-topo.html"/>
 <link rel="next" href="map-symbology.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -94,6 +94,7 @@
 <li class="chapter" data-level="3" data-path="map-symbology.html"><a href="map-symbology.html"><i class="fa fa-check"></i><b>3</b> Способы изображения и графические средства</a><ul>
 <li class="chapter" data-level="3.1" data-path="map-symbology.html"><a href="map-symbology.html#map-symbology-initial-data"><i class="fa fa-check"></i><b>3.1</b> Исходные данные</a></li>
 <li class="chapter" data-level="3.2" data-path="map-symbology.html"><a href="map-symbology.html#map-symbology-methods"><i class="fa fa-check"></i><b>3.2</b> Способы изображения</a></li>
+<li class="chapter" data-level="3.3" data-path="map-symbology.html"><a href="map-symbology.html#атрибуты-и-настройки-стиля"><i class="fa fa-check"></i><b>3.3</b> Атрибуты и настройки стиля</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="map-create.html"><a href="map-create.html"><i class="fa fa-check"></i><b>4</b> Составление географической карты</a><ul>
 <li class="chapter" data-level="4.1" data-path="map-create.html"><a href="map-create.html#map-create-database"><i class="fa fa-check"></i><b>4.1</b> Создание БД</a></li>
@@ -154,17 +155,19 @@
 <div id="map-math-crs" class="section level2">
 <h2><span class="header-section-number">2.4</span> Системы координат</h2>
 <p><a href="map-math.html#map-math">В начало справки ⇡</a></p>
-<p>В программном обеспечении ГИС традиционно принято выделять две большие категории систем координат (СК): 1) географические СК, 2) спроецированные СК.</p>
-<pre><code>&gt; **Географические системы координат** основаны на датумах. _Датум_ – это параметры размещения эллипсоида внутри тела земли. Для одного эллипсоида может быть много датумов. Единицы измерения в ГСК – широта и долгота в градусах.
-
-
-&gt; **Спроецированные системы координат** основаны на проекциях. _Проекция_ – это математически обусловленное правило перехода от поверхности эллипсоида к плоскости карты. Единицы измерения в спроецированных СК – метры, километры, мили, футы и прочие единицы длины.</code></pre>
+<p>В программном обеспечении ГИС традиционно принято выделять две большие категории систем координат (СК): 1) географические СК, 2) спроецированные СК</p>
+<blockquote>
+<p><strong>Географические системы координат</strong> основаны на датумах. <em>Датум</em> – это параметры размещения эллипсоида внутри тела земли. Для одного эллипсоида может быть много датумов. Единицы измерения в ГСК – широта и долгота в градусах.</p>
+</blockquote>
+<blockquote>
+<p><strong>Спроецированные системы координат</strong> основаны на проекциях. Проекция – это математически обусловленное правило перехода от поверхности эллипсоида к плоскости карты. Единицы измерения в спроецированных СК – метры, километры, мили, футы и прочие единицы длины.</p>
+</blockquote>
 <p>Проекций великое множество, они подразделяются по характеру искажений и по применяемой для построения вспомогательных геометрических фигур. Подробнее об этом можно узнать из учебников [<a href="https://geokniga.org/bookfiles/geokniga-berlyant-am-kartografiya.pdf">Картография, 2002</a>; <a href="https://dropbox.com/sh/zfcyx1ji3qt6ke6/AAAUi_OTMYle0g2sxhmfjZnha?dl=0">Серапинас, 2005</a>]</p>
 <p>В ГИС ПО системы координат могут быть представлены тремя основными форматами:</p>
 <ol style="list-style-type: decimal">
 <li><p>EPSG</p>
 <blockquote>
-<p>Коды проекций, которые присвиваются Международной ассоциацией производителей нефети и газа. Все коды с возможностью подбора проекции для территории собраны в <a href="http://www.epsg-registry.org/">реестре</a>. Более удобный инструмент для поиска собран в <a href="http://epsg.io">ресурсе</a>. Например, у наиболее часто встречающейся ГСК WGS 1984 – EPSG:4326, у проекции WGS 1984 UTM 37N – EPSG:32637. Обратите внимание, что далеко не все существующие проекции и системы координат имеют код EPSG.</p>
+<p>Коды проекций, которые присвиваются Международной ассоциацией производителей нефти и газа. Все коды с возможностью подбора проекции для территории собраны в <a href="http://www.epsg-registry.org/">реестре</a>. Более удобный инструмент для поиска собран в <a href="http://epsg.io">ресурсе</a>. Например, у наиболее часто встречающейся ГСК WGS 1984 – EPSG:4326, у проекции WGS 1984 UTM 37N – EPSG:32637. Обратите внимание, что далеко не все существующие проекции и системы координат имеют код EPSG.</p>
 </blockquote></li>
 <li><p>WKT</p>
 <blockquote>
@@ -210,9 +213,9 @@ PROJCRS[&quot;World_Miller_Cylindrical&quot;,
 <p>В разделе <strong>USAGE</strong> указывается, на какую территорию применима данная проекция.</p>
 <p>В разделе <strong>ID</strong> указан идентификатор этой проекции в ESRI – компании-разработчика ПО ArcGIS.</p>
 <ol start="3" style="list-style-type: decimal">
-<li><p>Proj (Proj4)</p>
+<li><p>PROJ (PROJ4)</p>
 <blockquote>
-<p>Proj – формат записи системы координат, разработанный для библиотеки Proj, предназначенной для преобразования проекций.</p>
+<p>PROJ – формат записи системы координат, разработанный для библиотеки Proj, предназначенной для преобразования проекций.</p>
 </blockquote></li>
 </ol>
 <p>Запись для уже знакомой нам проекции Миллера будет выглядеть следующим образом:</p>
