@@ -2,8 +2,10 @@
 
 
 ## Исходные данные {#map-symbology-initial-data}
-[]()
 
+[Примеры карт]()
+
+[Бланк задания]()
 
 ## Способы изображения {#map-symbology-methods}
 [В начало справки ⇡](#map-symbology)
