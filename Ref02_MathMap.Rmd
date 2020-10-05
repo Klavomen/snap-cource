@@ -11,6 +11,8 @@
 
 4. [Projection Wizard](https://projectionwizard.org)
 
+5. [G.Projector — Map Projection Explorer](https://www.giss.nasa.gov/tools/gprojector/download/)
+
 
 ## Исходные данные {#map-math-initial-data}
 
