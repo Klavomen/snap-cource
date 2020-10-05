@@ -3,9 +3,9 @@
 
 ## Исходные данные {#map-symbology-initial-data}
 
-[Примеры карт]()
+[Примеры карт](https://drive.google.com/drive/folders/1hbb13IYlOQN_QSebxW7OpPvh8j90zwDm)
 
-[Бланк задания]()
+[Бланк задания](https://yadi.sk/i/8Jka8SVegwxeqw)
 
 ## Способы изображения {#map-symbology-methods}
 [В начало справки ⇡](#map-symbology)
