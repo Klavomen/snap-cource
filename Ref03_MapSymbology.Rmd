@@ -3,11 +3,11 @@
 
 ## Исходные данные {#map-symbology-initial-data}
 
-[Примеры карт](https://drive.google.com/drive/folders/1hbb13IYlOQN_QSebxW7OpPvh8j90zwDm)
+[Варианты заданий](https://drive.google.com/drive/folders/1hbb13IYlOQN_QSebxW7OpPvh8j90zwDm)
 
 [Бланк задания](https://yadi.sk/i/8Jka8SVegwxeqw)
 
-## Способы изображения и графические переменные {#map-symbology-methods}
+## Графические переменные {#map-symbology-variables}
 [В начало справки ⇡](#map-symbology)
 
 Графические переменные    |
@@ -20,6 +20,8 @@
 `Штриховка`               |![]()
 
 
+## Способы изображения {#map-symbology-methods}
+[В начало справки ⇡](#map-symbology)
 
 Способы изображения       |
 --------------------------|-----------
@@ -34,6 +36,7 @@
 `Изолинии`                |![]()
 `Ареалы`                  |![]()
 `Локализованные диаграммы`|![]()
+
 
 
 ----
