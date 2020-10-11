@@ -23,9 +23,11 @@ favicon: images/favicon.ico
 
 # Программное обеспечение для работы {-}
 
+## QGIS {-}
+
 Для выполнения работ в курсе «картография» вам потребуется скачать и установить на свой компьютер геоинформационное приложение QGIS. Это свободно распространяемое программное обеспечение, то есть для его установки не требуется покупка или регистрация. 
 
-## Windows {-}
+### Windows {-}
 
 Скачайте с официального сайта последнюю стабильную версию QGIS (3.10). Выберите версию в зависимости от разрядности вашей системы: [64 bit](https://qgis.org/downloads/QGIS-OSGeo4W-3.10.3-3-Setup-x86_64.exe), [32 bit](https://qgis.org/downloads/QGIS-OSGeo4W-3.10.3-3-Setup-x86.exe).
 
@@ -55,7 +57,7 @@ favicon: images/favicon.ico
 
 ![](images/installation_instruction_win/win05.png)
 
-## macOS {-}
+### macOS {-}
 
 По состоянию на `r Sys.Date()` для прохождения практикума рекомендуется использовать альтернативную сборку версии [3.4.12](https://www.kyngchaos.com/files/software/qgis/QGIS-macOS-3.4.12-1.dmg). Перейдя по ссылке, необходимо согласиться сохранить образ установочного диска  на компьютер (можно разрешить его сразу открыть средствами _DiskImageMounter_):
 
@@ -79,9 +81,18 @@ favicon: images/favicon.ico
 
 ![](images/installation_instruction_mac/mac05.png)
 
-## Linux {-}
+### Linux {-}
 
 Воспользуйтесь инструкциями по [этой ссылке](https://qgis.org/ru/site/forusers/alldownloads.html#linux).
 
 Дополнительную информацию по установке можно найти на [https://qgis.org/ru/site/forusers/download.html](https://qgis.org/ru/site/forusers/download.html).
+
+
+## Inkscape {-}
+
+Для некоторых операций оформления карты невозможно обойтись только геоинформационным ПО. Открытый графический пакет Inkscape доступен для скачивания на [официальном сайте](https://inkscape.org/ru/).
+
+![](images/inkscape.png)
+
+Выберите дистрибутив для вашей операционной системы.
 
