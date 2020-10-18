@@ -96,10 +96,6 @@ favicon: images/favicon.ico
 
 Выберите дистрибутив для вашей операционной системы.
 
-
-![](images/inkscape2.png)
-
-
 Если вы устанавливаете Inkscape на Windows, выберите разрядность вашей системы
 
 
@@ -110,6 +106,5 @@ favicon: images/favicon.ico
 
 
 ![](images/inkscape4.png)
-
 
 Установку лучше всего запускать от имени администратора.
