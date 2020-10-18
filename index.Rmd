@@ -96,3 +96,20 @@ favicon: images/favicon.ico
 
 Выберите дистрибутив для вашей операционной системы.
 
+
+![](images/inkscape2.png)
+
+
+Если вы устанавливаете Inkscape на Windows, выберите разрядность вашей системы
+
+
+![](images/inkscape3.png)
+
+
+Для скачивания необходимо выбрать **Windows Installer Package** (формат файла MSI).
+
+
+![](images/inkscape4.png)
+
+
+Установку лучше всего запускать от имени администратора.
