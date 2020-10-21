@@ -16,9 +16,9 @@
 
 ## Исходные данные {#map-math-initial-data}
 
-[База данных в формате Geopackage](https://yadi.sk/d/C7XxPEtXmS4JWA)
+[База данных в формате Geopackage](https://yadi.sk/d/U-bdDs1Q3gggdA)
 
-[Бланк задания](https://yadi.sk/i/6u0jCp23XR51ww)
+[Бланк задания](https://yadi.sk/i/8kNsQRI6E2DX1A)
 
 
 ## Интерфейс QGIS {#map-math-interface}
