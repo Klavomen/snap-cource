@@ -3,9 +3,9 @@
 
 ## Исходные данные {#map-symbology-initial-data}
 
-[Варианты заданий](https://drive.google.com/drive/folders/1hbb13IYlOQN_QSebxW7OpPvh8j90zwDm)
+[Варианты заданий](https://drive.google.com/drive/folders/1hbb13IYlOQN_QSebxW7OpPvh8j90zwDm){target="_blank"}
 
-[Бланк задания](https://yadi.sk/i/8Jka8SVegwxeqw)
+[Бланк задания](https://yadi.sk/i/8Jka8SVegwxeqw){target="_blank"}
 
 
 ## Графические переменные {#map-symbology-variables}
@@ -34,7 +34,7 @@
 [В начало справки ⇡](#map-symbology)
 
 
-Подробнее о способах изображения вы можете узнать из учебника А.М. Берлянта [[Берлянт, 2002](https://yadi.sk/i/Fg77Q031F0lMoQ)], еще подробнее – из учебника К.А. Салищева [[Салищев, 1982](https://yadi.sk/i/e9gW1TmzdEUQqg)].
+Подробнее о способах изображения вы можете узнать из учебника А.М. Берлянта [[Берлянт, 2002](https://yadi.sk/i/Fg77Q031F0lMoQ){target="_blank"}], еще подробнее – из учебника К.А. Салищева [[Салищев, 1982](https://yadi.sk/i/e9gW1TmzdEUQqg){target="_blank"}].
 
 
 Способы изображения       |
