@@ -29,7 +29,7 @@ favicon: images/favicon.ico
 
 ### Windows {-}
 
-Скачайте с официального сайта последнюю стабильную версию QGIS (3.10). Выберите версию в зависимости от разрядности вашей системы: [64 bit](https://qgis.org/downloads/QGIS-OSGeo4W-3.10.3-3-Setup-x86_64.exe), [32 bit](https://qgis.org/downloads/QGIS-OSGeo4W-3.10.3-3-Setup-x86.exe).
+Скачайте с официального сайта последнюю стабильную версию QGIS (3.10). Выберите версию в зависимости от разрядности вашей системы: [64 bit](https://qgis.org/downloads/QGIS-OSGeo4W-3.10.3-3-Setup-x86_64.exe){target="_blank"}, [32 bit](https://qgis.org/downloads/QGIS-OSGeo4W-3.10.3-3-Setup-x86.exe){target="_blank"}.
 
 Когда исполняемый файл загрузится, запустите его. Если потребуется, разрешите приложению вносить изменения на вашем устройстве. 
 
@@ -59,7 +59,7 @@ favicon: images/favicon.ico
 
 ### macOS {-}
 
-По состоянию на `r Sys.Date()` для прохождения практикума рекомендуется использовать альтернативную сборку версии [3.4.12](https://www.kyngchaos.com/files/software/qgis/QGIS-macOS-3.4.12-1.dmg). Перейдя по ссылке, необходимо согласиться сохранить образ установочного диска  на компьютер (можно разрешить его сразу открыть средствами _DiskImageMounter_):
+По состоянию на `r Sys.Date()` для прохождения практикума рекомендуется использовать альтернативную сборку версии [3.4.12](https://www.kyngchaos.com/files/software/qgis/QGIS-macOS-3.4.12-1.dmg){target="_blank"}. Перейдя по ссылке, необходимо согласиться сохранить образ установочного диска  на компьютер (можно разрешить его сразу открыть средствами _DiskImageMounter_):
 
 ![](images/installation_instruction_mac/mac01.png)
 
@@ -83,14 +83,14 @@ favicon: images/favicon.ico
 
 ### Linux {-}
 
-Воспользуйтесь инструкциями по [этой ссылке](https://qgis.org/ru/site/forusers/alldownloads.html#linux).
+Воспользуйтесь инструкциями по [этой ссылке](https://qgis.org/ru/site/forusers/alldownloads.html#linux){target="_blank"}.
 
-Дополнительную информацию по установке можно найти на [https://qgis.org/ru/site/forusers/download.html](https://qgis.org/ru/site/forusers/download.html).
+Дополнительную информацию по установке можно найти на [https://qgis.org/ru/site/forusers/download.html](https://qgis.org/ru/site/forusers/download.html){target="_blank"}.
 
 
 ## Inkscape {-}
 
-Для некоторых операций оформления карты невозможно обойтись только геоинформационным ПО. Открытый графический пакет **Inkscape** доступен для скачивания на [официальном сайте](https://inkscape.org/ru/).
+Для некоторых операций оформления карты невозможно обойтись только геоинформационным ПО. Открытый графический пакет **Inkscape** доступен для скачивания на [официальном сайте](https://inkscape.org/ru/){target="_blank"}.
 
 ![](images/inkscape.png)
 
