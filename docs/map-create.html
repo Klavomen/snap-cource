@@ -106,7 +106,8 @@
 <li class="chapter" data-level="4" data-path="map-create.html"><a href="map-create.html"><i class="fa fa-check"></i><b>4</b> Составление географической карты</a><ul>
 <li class="chapter" data-level="4.1" data-path="map-create.html"><a href="map-create.html#map-create-database"><i class="fa fa-check"></i><b>4.1</b> Создание базы пространственных данных</a></li>
 <li class="chapter" data-level="4.2" data-path="map-create.html"><a href="map-create.html#map-create-vectorize"><i class="fa fa-check"></i><b>4.2</b> Векторизация</a></li>
-<li class="chapter" data-level="4.3" data-path="map-create.html"><a href="map-create.html#map-create-symbology"><i class="fa fa-check"></i><b>4.3</b> Оформление</a></li>
+<li class="chapter" data-level="4.3" data-path="map-create.html"><a href="map-create.html#map-create-attributes"><i class="fa fa-check"></i><b>4.3</b> Работа с атрибутами</a></li>
+<li class="chapter" data-level="4.4" data-path="map-create.html"><a href="map-create.html#map-create-symbology"><i class="fa fa-check"></i><b>4.4</b> Настройка символики</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -181,10 +182,23 @@
 <p>Выбрать объекты, например, для склеивания можно с помощью инструмента выделения <img src="images/Ref04/Selection_tool.png" />.</p>
 <p>Не забывайте регулярно сохранять изменения в геометрии слоев с помощью кнопки на панели <img src="images/Ref04/Save_edits.png" />. Также не забывайте изменять изменения в самом проекте (они касаются набора слоев, их оформления, некоторых параметров) с помощью кнопки <img src="images/Ref04/Save_Project.png" />.</p>
 </div>
-<div id="map-create-symbology" class="section level2">
-<h2><span class="header-section-number">4.3</span> Оформление</h2>
+<div id="map-create-attributes" class="section level2">
+<h2><span class="header-section-number">4.3</span> Работа с атрибутами</h2>
 <p><a href="map-create.html#map-create">В начало справки ⇡</a></p>
-<p><strong>Сохраните проект.</strong></p>
+<p>Векторизация предназначена для показа геометрической составляющей объектов и явлений на карте. Для показа семантических (смысловых) различий в явлениях используются атрибуты. Преимущество ГИС-пакетов по сравнению с графическими пакетами заключается в том, что мы можем напрямую сопоставить символику слоя и значения атрибутивных полей. Например, если мы показываем качественным фоном какое-либо явление, то каждой явление должно иметь своё значение в атрибутивной таблице. Открыть атрибутивную таблицу можно, нажав правой кнопкой мыши по слою и выбрав пункт <strong>Открыть таблицу атрибутов</strong>.</p>
+<div class="figure">
+<img src="images/Ref04/Attribute_table.png" alt="" />
+<p class="caption">Пример вида атрибутивной таблицы на регионы России</p>
+</div>
+<p>Для редактирования атрибутов необходимо зайти в режим редактирования с помощью кнопки <img src="images/Ref04/Edit.png" />. Для добавления или удаления атрибутивных столбцов также необходимо зайтив в режим редактирования, после чего появятся соответствующие кнопки <img src="images/Ref04/New_field.png" /> и <img src="images/Ref04/Delete_field.png" />.</p>
+<blockquote>
+<p>Обратите внимание, что изменение структуры атрибутивной таблицы в QGIS – это исключительно его «фишка». Другие известные ГИС-пакеты, например ArcGIS, позволяют это делать только вне режима редактирования.</p>
+</blockquote>
+<p>Обратите внимание, что каждая строка в атрибутивной таблице – это, по сути, один объект в классе объектов. Выделять объекты в атрибутивной таблицы можно с помощью нажатия левой кнопки мыши по левому краю строки. Для выбора нескольких строк подряд можно «тянуть» выделение левой кнопкой мыши, либо выделить первый и последний объект с зажатым <strong>SHIFT</strong>. Для выбора нескольких отдельных строк зажмите <strong>CTRL</strong>. Выделяемые в атрибутивной таблице объекты будут подсвечиваться жёлтым цветом на карте. Для приближения к выбранному объекту нажмите на кнопку <strong>Увеличить карту до выделенных строк</strong> <img src="images/Ref04/Zoom_to_selection.png" />.</p>
+</div>
+<div id="map-create-symbology" class="section level2">
+<h2><span class="header-section-number">4.4</span> Настройка символики</h2>
+<p><a href="map-create.html#map-create">В начало справки ⇡</a></p>
 <table>
 <tbody>
 <tr class="odd">
