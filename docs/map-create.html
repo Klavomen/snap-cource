@@ -107,7 +107,10 @@
 <li class="chapter" data-level="4.1" data-path="map-create.html"><a href="map-create.html#map-create-database"><i class="fa fa-check"></i><b>4.1</b> Создание базы пространственных данных</a></li>
 <li class="chapter" data-level="4.2" data-path="map-create.html"><a href="map-create.html#map-create-vectorize"><i class="fa fa-check"></i><b>4.2</b> Векторизация</a></li>
 <li class="chapter" data-level="4.3" data-path="map-create.html"><a href="map-create.html#map-create-attributes"><i class="fa fa-check"></i><b>4.3</b> Работа с атрибутами</a></li>
-<li class="chapter" data-level="4.4" data-path="map-create.html"><a href="map-create.html#map-create-symbology"><i class="fa fa-check"></i><b>4.4</b> Настройка символики</a></li>
+<li class="chapter" data-level="4.4" data-path="map-create.html"><a href="map-create.html#map-create-symbology"><i class="fa fa-check"></i><b>4.4</b> Настройка символики</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="map-create.html"><a href="map-create.html#map-create-symbology-simple"><i class="fa fa-check"></i><b>4.4.1</b> Использование простой символики</a></li>
+<li class="chapter" data-level="4.4.2" data-path="map-create.html"><a href="map-create.html#map-create-symbology-charts"><i class="fa fa-check"></i><b>4.4.2</b> Использование графических средств диаграмм</a></li>
+</ul></li>
 <li class="chapter" data-level="4.5" data-path="map-create.html"><a href="map-create.html#map-create-labeling"><i class="fa fa-check"></i><b>4.5</b> Настройка подписей</a></li>
 <li class="chapter" data-level="4.6" data-path="map-create.html"><a href="map-create.html#map-create-fake-symbology"><i class="fa fa-check"></i><b>4.6</b> Имитация некоторых сложных графических средств и способов изображения</a></li>
 </ul></li>
@@ -194,18 +197,49 @@
 </div>
 <p>Для редактирования атрибутов необходимо зайти в режим редактирования с помощью кнопки <img src="images/Ref04/Edit.png" />. Для добавления или удаления атрибутивных столбцов также необходимо зайтив в режим редактирования, после чего появятся соответствующие кнопки <img src="images/Ref04/New_field.png" /> и <img src="images/Ref04/Delete_field.png" />.</p>
 <blockquote>
-<p>Обратите внимание, что изменение структуры атрибутивной таблицы в QGIS – это исключительно его «фишка». Другие известные ГИС-пакеты, например ArcGIS, позволяют это делать только вне режима редактирования.</p>
+<p>Обратите внимание, что изменение структуры атрибутивной таблицы – это исключительно «фишка» QGIS. Другие известные ГИС-пакеты, например ArcGIS, позволяют это делать только вне режима редактирования.</p>
 </blockquote>
 <p>Обратите внимание, что каждая строка в атрибутивной таблице – это, по сути, один объект в классе объектов. Выделять объекты в атрибутивной таблицы можно с помощью нажатия левой кнопки мыши по левому краю строки. Для выбора нескольких строк подряд можно «тянуть» выделение левой кнопкой мыши, либо выделить первый и последний объект с зажатым <strong>SHIFT</strong>. Для выбора нескольких отдельных строк зажмите <strong>CTRL</strong>. Выделяемые в атрибутивной таблице объекты будут подсвечиваться жёлтым цветом на карте. Для приближения к выбранному объекту нажмите на кнопку <strong>Увеличить карту до выделенных строк</strong> <img src="images/Ref04/Zoom_to_selection.png" />.</p>
 </div>
 <div id="map-create-symbology" class="section level2">
 <h2><span class="header-section-number">4.4</span> Настройка символики</h2>
 <p><a href="map-create.html#map-create">В начало справки ⇡</a></p>
-<p>По умолчанию все слои, открываемые в QGIS имеют единую символику для всех объектов слоя. Для площадных классов объектов это сплошная заливка какого-либо цвета. Получить доступ к настройкам стиля можно через свойства слоя во вкладке <strong>Стиль</strong>.</p>
+<div id="map-create-symbology-simple" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Использование простой символики</h3>
+<div id="map-create-symbology-simple-single" class="section level4">
+<h4><span class="header-section-number">4.4.1.1</span> Обычные знаки</h4>
+<p>По умолчанию все слои, открываемые в QGIS имеют единую символику для всех объектов слоя. Для площадных классов объектов это сплошная заливка какого-либо цвета. Получить доступ к настройкам стиля можно через свойства слоя во вкладке <strong>Стиль</strong>. Обратите внимание, что способ подобной символики указан в самом верху окна и называется <strong>Обычный знак</strong>.</p>
 <div class="figure">
 <img src="images/Ref04/Single_symbol.png" alt="" />
 <p class="caption">Единый символ в виде сплошной цветовой заливки</p>
 </div>
+<p>Мы можем задавать более сложную символику для наших объектов, то есть не только цветовую заливку и обводку. Построение таких символов в QGIS осуществляется в виде иерархии. Например, для добавления штриховки поверх цвета вам нужно нажать кнопку <img src="images/Ref04/Plus.png" />, расположенную справа от окна самого символа в настройках стиля. После этого в символе появится второй слой, также по умолчанию залитый сплошной цветовой заливкой. <strong>Тип слоя</strong> можно поменять на штриховку, либо на другой вариант символики.</p>
+<blockquote>
+<p>В терминологии QGIS <strong>штриховкой</strong> называется любой паттерн (графическая структура), состоящий из линейных элементов. Штриховка, состоящая из нелинейных (точечных) элементов, называется <strong>заливкой маркерами</strong>.</p>
+</blockquote>
+<div class="figure">
+<img src="images/Ref04/Layer_type.png" alt="" />
+<p class="caption">Типы слоёв символики</p>
+</div>
+<p>Обратите внимание, что при выборе типа слоя в виде штриховки его символ распадётся на иерархические элементы – собственно <strong>заливка штриховкой</strong> и составляющие её <strong>линии</strong>. Для заливки штриховки доступны свойства наклона (<strong>Вращение</strong>), интервала (<strong>Отступа</strong>) и <strong>смещения</strong>.</p>
+<div class="figure">
+<img src="images/Ref04/Hatching.png" alt="" />
+<p class="caption">Символика штриховки</p>
+</div>
+<p>Если выделять последовательно в иерархии символа <strong>Линия</strong> и <strong>Простая линия</strong>, то вы увидете, что для них доступны разные настройки. В первом случае нам доступны уже стилизованные линии, во втором случае – простая заготовка линии, для которой можно настроить <strong>стиль обводки</strong> – сплошная линия, пунктирная, штриховая и т.д.</p>
+<div class="figure">
+<img src="images/Ref04/Simple_line.png" alt="" />
+<p class="caption">Настройки простой линии</p>
+</div>
+<p>Для заливки маркерами нужно выбрать соответствующий тип слоя. После этого появится аналогичная штриховке иерархия графических слоёв. Для настройки пользователю доступны параметры самой заливки – расстояния и смещения маркеров, а также параметры маркеров – тип слоя маркеров, размер маркера, цвет и другие. Для добавления пользовательских маркеров используйте тип слоя <strong>SVG-маркеры</strong>, для которых можно подгрузить собственные графические символы в формате SVG.</p>
+<div class="figure">
+<img src="images/Ref04/Marker_fill.png" alt="" />
+<p class="caption">Настройки маркеров для заливки</p>
+</div>
+</div>
+<div id="map-create-symbology-simple-unique" class="section level4">
+<h4><span class="header-section-number">4.4.1.2</span> Уникальные значения</h4>
+<p><a href="map-create.html#map-create">В начало справки ⇡</a></p>
 <p>Рассмотрим, каким образом мы ставим в соответствие значения атрибутивных полей и символики. Например, мы хотим присвоить разные цвета для всех регионов. В самой верхней строчке нужно выбрать <strong>Уникальные значения</strong>, после чего указать в строке <strong>Value</strong> атрибутивное поле, значения которого мы будем использовать. В строке <strong>Градиент</strong> можно выбрать заранее заготовленные цветовые шкалы, в том числе и случайные цвета. Для добавления всех значений из атрибутивного поля с присвоенными цветами нажмите на кнопку <strong>Классифицировать</strong> внизу окна. После применения выбранной классификации в окне слоёв наш слой будет показа соответствующим образом, как в легенде.</p>
 <div class="figure">
 <img src="images/Ref04/Unique_values.png" alt="" />
@@ -216,12 +250,22 @@
 <img src="images/Ref04/Manual_fill.png" alt="" />
 <p class="caption">Изменение цвета символа</p>
 </div>
+</div>
+<div id="map-create-symbology-simple-graduate" class="section level4">
+<h4><span class="header-section-number">4.4.1.3</span> Градуированные знаки</h4>
+<p><a href="map-create.html#map-create">В начало справки ⇡</a></p>
 <p>Для создания градуированных цветовых шкал в случае использования в качестве способов изображения изолиний с послойной окраской, картограмм, количественного фона используется стиль градуированного знака.</p>
 <div class="figure">
 <img src="images/Ref04/Graduated_colors.png" alt="" />
 <p class="caption">Настройки стиля градуированных знаков</p>
 </div>
 <p>В окошке <strong>градиент</strong> можно выбрать соответствующий градиент. Если вы хотите создать новый градиент – щёлкните правой кнопкой мыши по окошку и выберите <strong>Создать новый градиент…</strong>, либо <strong>Редактировать градиент…</strong>. Внизу окна свойств стиля вы можете увидеть настройку классификации <strong>Мода</strong>, а также количество классов. Подробнее о разных методах классификации и о работе с гистограммой вы узнаете из курса <strong>Основы геоинформатики</strong>.</p>
+</div>
+</div>
+<div id="map-create-symbology-charts" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Использование графических средств диаграмм</h3>
+<p><a href="map-create.html#map-create">В начало справки ⇡</a></p>
+</div>
 </div>
 <div id="map-create-labeling" class="section level2">
 <h2><span class="header-section-number">4.5</span> Настройка подписей</h2>
