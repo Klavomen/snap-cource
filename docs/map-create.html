@@ -113,7 +113,8 @@
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="map-create.html"><a href="map-create.html#map-create-labeling"><i class="fa fa-check"></i><b>4.5</b> Настройка подписей</a></li>
 <li class="chapter" data-level="4.6" data-path="map-create.html"><a href="map-create.html#map-create-fake-symbology"><i class="fa fa-check"></i><b>4.6</b> Имитация некоторых сложных графических средств и способов изображения</a></li>
-<li class="chapter" data-level="4.7" data-path="map-create.html"><a href="map-create.html#map-create-inkscape"><i class="fa fa-check"></i><b>4.7</b> Редактирование карты в графическом пакете</a></li>
+<li class="chapter" data-level="4.7" data-path="map-create.html"><a href="map-create.html#map-create-legend"><i class="fa fa-check"></i><b>4.7</b> Работа с легендой в компоновке</a></li>
+<li class="chapter" data-level="4.8" data-path="map-create.html"><a href="map-create.html#map-create-inkscape"><i class="fa fa-check"></i><b>4.8</b> Редактирование карты в графическом пакете</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -308,13 +309,41 @@
 <div id="map-create-labeling" class="section level2">
 <h2><span class="header-section-number">4.5</span> Настройка подписей</h2>
 <p><a href="map-create.html#map-create">В начало справки ⇡</a></p>
+<p>Подписи так же, как и символика в геоинформационном программном обеспечении зависят от атрибутов. Для включения подписей в слое зайдите в его свойства и найдите вкладку <strong>Подписи</strong>.</p>
+<div class="figure">
+<img src="images/Ref04/Labels.png" alt="" />
+<p class="caption">настройка подписей</p>
+</div>
+<p>В поле <strong>Value</strong> указывается атрибутивное поле, из которого подтягиваются сами подписи. Ниже приведены классические настройки для текст – шрифт, размер, стиль, цвет и т.д. Особое внимание при составлении карты следует уделить размещению подписей, чему посвящена отдельная вкладка настроек подписей.</p>
+<div class="figure">
+<img src="images/Ref04/Labels_location.png" alt="" />
+<p class="caption">Размещение подписей</p>
+</div>
+<p>К сожалению, возможностей по оптимальному автоматическому размещению подписей в QGIS не так много. Пользователь может вручную править размещение подписей – для этого необходимо обратиться к специальной панели <img src="images/Ref04/Labels_panel.png" />. Для перемещения подписей нажмите на кнопку <img src="images/Ref04/Labels_move.png" />. Вместо курсора на карте появится крест, которым нужно щёлкнуть по нужной подписи. После этого откроется диалоговое окно:</p>
+<p><img src="images/Ref04/Auxiliary_Storage_dialog.png" /></p>
+<p>После нажатия на <strong>OK</strong> вы сможете перетаскивать подписи одним щелчком мыши. Аналогично после нажатия кнопки <img src="images/Ref04/Labels_rotate.png" /> подписи можно разворачивать, а после нажатия кнопки <img src="images/Ref04/Labels_edit.png" /> – редактировать. Для редактирования открывается отдельное окно, где можно индивидуально настроить параметры каждой подписи.</p>
+<div class="figure">
+<img src="images/Ref04/Labels_properties.png" alt="" />
+<p class="caption">Параметры подписи</p>
+</div>
 </div>
 <div id="map-create-fake-symbology" class="section level2">
 <h2><span class="header-section-number">4.6</span> Имитация некоторых сложных графических средств и способов изображения</h2>
 <p><a href="map-create.html#map-create">В начало справки ⇡</a></p>
+<p>Некоторые способы изображения трудно реализуемы в ГИС-пакетах. Например, точечный способ есть в ArcGIS, но QGIS он пока не реализуем. Если всё же есть необходимость в использовании данного способа изображения, то можно его сымитировать, хотя с точки зрения базы данных это будет не совсем корректно – вместо полигонального слоя (явление площадной рассеянной локализации) создайте точечный слой, в котором каждая точка будет соответствовать одной точке на карте.</p>
+</div>
+<div id="map-create-legend" class="section level2">
+<h2><span class="header-section-number">4.7</span> Работа с легендой в компоновке</h2>
+<p><a href="map-create.html#map-create">В начало справки ⇡</a></p>
+<p>В макете карты вы можете добавлять столько элементов легенды (кнопка <img src="images/Ref04/Add_legend.png" />), сколько отдельных блоков легенды в компоновке вы хотите сделать. Следует помнить, что в QGIS легенда собирается автоматически из содержания слоёв проекта, но пользователь может поменять её свойства.</p>
+<div class="figure">
+<img src="images/Ref04/Legend_properties.png" alt="" />
+<p class="caption">Свойства легенды в макете</p>
+</div>
+<p>Если убрать галочку возле опции <strong>Auto update</strong>, то из перечня слоё легенды можно убрать лишние слои или отдельные позиции, либо добавить отсутствующие с помощью кнопок ниже. С помощью кнопки <img src="images/Ref04/Legend_edit_item.png" /> можно редактировать текст легенды.</p>
 </div>
 <div id="map-create-inkscape" class="section level2">
-<h2><span class="header-section-number">4.7</span> Редактирование карты в графическом пакете</h2>
+<h2><span class="header-section-number">4.8</span> Редактирование карты в графическом пакете</h2>
 <p><a href="map-create.html#map-create">В начало справки ⇡</a></p>
 <table>
 <tbody>
