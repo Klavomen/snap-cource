@@ -1,0 +1,15 @@
+# Картографическая генерализация {#map-generalize}
+
+## Исходные данные {#map-generalize-initial-data}
+
+[Бланк задания](){target="_blank"}
+
+##  {#map-generalize-database}
+[В начало справки ⇡](#map-generalize)
+
+
+
+
+----
+_Карпачевский А.М._ **Картография: практикум в QGIS**. М.: Географический факультет МГУ, `r lubridate::year(Sys.Date())`.
+----
