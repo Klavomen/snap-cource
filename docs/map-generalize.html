@@ -119,7 +119,7 @@
 </ul></li>
 <li class="chapter" data-level="5" data-path="map-generalize.html"><a href="map-generalize.html"><i class="fa fa-check"></i><b>5</b> Картографическая генерализация</a><ul>
 <li class="chapter" data-level="5.1" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-initial-data"><i class="fa fa-check"></i><b>5.1</b> Исходные данные</a></li>
-<li class="chapter" data-level="5.2" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-database"><i class="fa fa-check"></i><b>5.2</b> </a></li>
+<li class="chapter" data-level="5.2" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-methods"><i class="fa fa-check"></i><b>5.2</b> Приёмы генерализации</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -146,10 +146,78 @@
 <div id="map-generalize-initial-data" class="section level2">
 <h2><span class="header-section-number">5.1</span> Исходные данные</h2>
 <p><a href="" target="_blank">Бланк задания</a></p>
+<p><a href="" target="_blank">База данных</a></p>
 </div>
-<div id="map-generalize-database" class="section level2">
-<h2><span class="header-section-number">5.2</span> </h2>
+<div id="map-generalize-methods" class="section level2">
+<h2><span class="header-section-number">5.2</span> Приёмы генерализации</h2>
 <p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
+<p>Все приёмы генерализации по К.А. Салищеву [<a href="https://yadi.sk/i/e9gW1TmzdEUQqg" target="_blank">Салищев, 1982</a>] применительно к геоинформационному ПО можно разделить с точки зрения работы пользователя. Часть приёмов подразумевает, что пользователь при генерализации редактирует геометрию (правит векторную составляющу, работает с узлами), другая часть подразумевает работу с атрибутами объектов, либо вообще – создание нового абсолютно нового класса объектов, зачастую – другого типа геометрии.</p>
+<table>
+<colgroup>
+<col width="39%" />
+<col width="18%" />
+<col width="18%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Приём генерализации</th>
+<th>Работа с геометрией</th>
+<th>Работа с атрибутами</th>
+<th>Изменение типа геометрии</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Упрощение</code></td>
+<td><strong>+</strong></td>
+<td><strong>-</strong></td>
+<td><strong>-</strong></td>
+</tr>
+<tr class="even">
+<td><code>Объединение</code></td>
+<td><strong>+</strong></td>
+<td><strong>-</strong></td>
+<td><strong>-</strong></td>
+</tr>
+<tr class="odd">
+<td><code>Сдвиг</code></td>
+<td><strong>+</strong></td>
+<td><strong>-</strong></td>
+<td><strong>-</strong></td>
+</tr>
+<tr class="even">
+<td><code>Утрирование</code></td>
+<td><strong>+</strong></td>
+<td><strong>-</strong></td>
+<td><strong>-</strong></td>
+</tr>
+<tr class="odd">
+<td><code>Отбор</code></td>
+<td><strong>-</strong></td>
+<td><strong>+</strong></td>
+<td><strong>-</strong></td>
+</tr>
+<tr class="even">
+<td><code>Обобщение качественных характеристик</code></td>
+<td><strong>-</strong></td>
+<td><strong>+</strong></td>
+<td><strong>-</strong></td>
+</tr>
+<tr class="odd">
+<td><code>Обобщение количественных характеристик</code></td>
+<td><strong>-</strong></td>
+<td><strong>+</strong></td>
+<td><strong>-</strong></td>
+</tr>
+<tr class="even">
+<td><code>Переход от простых понятий к сложным</code></td>
+<td><strong>-</strong></td>
+<td><strong>-</strong></td>
+<td><strong>+</strong></td>
+</tr>
+</tbody>
+</table>
 <table>
 <tbody>
 <tr class="odd">
