@@ -1,5 +1,9 @@
 # Составление географической карты {#map-create}
 
+## Исходные данные {#map-create-initial-data}
+
+[Бланк задания](https://yadi.sk/i/5PO4s2Zm784iJg){target="_blank"}
+
 ## Создание базы пространственных данных {#map-create-database}
 [В начало справки ⇡](#map-create)
 
