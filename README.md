@@ -1,1 +1,1 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "Get Started" at https://bookdown.org/home/about/ for how to compile this example.
+Help information and practical guides describing the use of the QGIS in cartography course for students of Geography faculty, Lomonosov Moscow State University.
