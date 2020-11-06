@@ -4,10 +4,11 @@ output_dir: docs
 rmd_files:
     - "index.Rmd"
     - "Ref01_Topo.Rmd"
-    - "Ref02_MathMap.Rmd"
+    - "Ref02_MapMath.Rmd"
     - "Ref03_MapSymbology.Rmd"
     - "Ref04_MapCreate.Rmd"
     - "Ref05_MapGeneralization.Rmd"
+    - "Ref06_MapUse.Rmd"
 delete_merged_file: true
 language:
   label:

@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Справка 3 Способы изображения и графические средства | Картография: практикум в QGIS</title>
-  <meta name="description" content="Справка 3 Способы изображения и графические средства | Картография: практикум в QGIS" />
+  <title>Справка 6 Картографический метод исследования | Картография: практикум в QGIS</title>
+  <meta name="description" content="Справка 6 Картографический метод исследования | Картография: практикум в QGIS" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Справка 3 Способы изображения и графические средства | Картография: практикум в QGIS" />
+  <meta property="og:title" content="Справка 6 Картографический метод исследования | Картография: практикум в QGIS" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Справка 3 Способы изображения и графические средства | Картография: практикум в QGIS" />
+  <meta property="og:description" content="Справка 6 Картографический метод исследования | Картография: практикум в QGIS" />
   <meta name="github-repo" content="iowq750/cartography" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Справка 3 Способы изображения и графические средства | Картография: практикум в QGIS" />
+  <meta name="twitter:title" content="Справка 6 Картографический метод исследования | Картография: практикум в QGIS" />
   
-  <meta name="twitter:description" content="Справка 3 Способы изображения и графические средства | Картография: практикум в QGIS" />
+  <meta name="twitter:description" content="Справка 6 Картографический метод исследования | Картография: практикум в QGIS" />
   
 
 <meta name="author" content="Карпачевский А.М." />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon.png" />
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="map-math.html"/>
-<link rel="next" href="map-create.html"/>
+<link rel="prev" href="map-generalize.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -149,125 +149,16 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="map-symbology" class="section level1">
-<h1><span class="header-section-number">Справка 3</span> Способы изображения и графические средства</h1>
-<div id="map-symbology-initial-data" class="section level2">
-<h2><span class="header-section-number">3.1</span> Исходные данные</h2>
-<p><a href="https://drive.google.com/drive/folders/1hbb13IYlOQN_QSebxW7OpPvh8j90zwDm" target="_blank">Варианты заданий</a></p>
-<p><a href="https://yadi.sk/i/8Jka8SVegwxeqw" target="_blank">Бланк задания</a></p>
+<div id="map-use" class="section level1">
+<h1><span class="header-section-number">Справка 6</span> Картографический метод исследования</h1>
+<div id="map-use-initial-data" class="section level2">
+<h2><span class="header-section-number">6.1</span> Исходные данные</h2>
+<p><a href="" target="_blank">Бланк задания</a></p>
+<p><a href="" target="_blank">База данных</a></p>
 </div>
-<div id="map-symbology-variables" class="section level2">
-<h2><span class="header-section-number">3.2</span> Графические переменные</h2>
-<p><a href="map-symbology.html#map-symbology">В начало справки ⇡</a></p>
-<p>Классические графические переменные были предложены Ж. Бертеном. С помощью них осуществляется семантическая дифференциация содержания карты.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Графические переменные</th>
-<th>Терминология ГИС ПО</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>Цвет</code></td>
-<td><code>Hue</code></td>
-</tr>
-<tr class="even">
-<td><code>Оттенок</code></td>
-<td><code>Saturation, value</code></td>
-</tr>
-<tr class="odd">
-<td><code>Форма</code></td>
-<td><code>Marker symbol</code></td>
-</tr>
-<tr class="even">
-<td><code>Размер</code></td>
-<td><code>Size</code></td>
-</tr>
-<tr class="odd">
-<td><code>Ориентировка</code></td>
-<td><code>Rotation</code></td>
-</tr>
-<tr class="even">
-<td><code>Структура</code></td>
-<td><code>Marker fill, line fill</code></td>
-</tr>
-</tbody>
-</table>
-<p>При работе с геоинформационным программным обеспечением вам следует иметь в виду, что на данный момент в картографии доступно уже больше графических переменных – например, прозрачность, анимация и другие.</p>
-<p><strong>Графические средства</strong> – это конкретная реализация графических переменных на карте.</p>
-</div>
-<div id="map-symbology-methods" class="section level2">
-<h2><span class="header-section-number">3.3</span> Способы изображения</h2>
-<p><a href="map-symbology.html#map-symbology">В начало справки ⇡</a></p>
-<p>Подробнее о способах изображения вы можете узнать из учебника А.М. Берлянта [<a href="https://yadi.sk/i/Fg77Q031F0lMoQ" target="_blank">Берлянт, 2002</a>], еще подробнее – из учебника К.А. Салищева [<a href="https://yadi.sk/i/e9gW1TmzdEUQqg" target="_blank">Салищев, 1982</a>].</p>
-<table>
-<thead>
-<tr class="header">
-<th>Способы изображения</th>
-<th>Локализация</th>
-<th>Тип геометрии в БПД</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>Значки</code></td>
-<td><code>точечная</code></td>
-<td><code>точка</code>, <code>мультиточка</code></td>
-</tr>
-<tr class="even">
-<td><code>Линейные знаки</code></td>
-<td><code>линейная</code></td>
-<td><code>линия</code>, <code>мультилиния</code></td>
-</tr>
-<tr class="odd">
-<td><code>Знаки движения</code></td>
-<td><code>линейная</code></td>
-<td><code>линия</code>, <code>мультилиния</code></td>
-</tr>
-<tr class="even">
-<td><code>Качественный фон</code></td>
-<td><code>площадная сплошная</code></td>
-<td><code>полигон</code>, <code>мультиполигон</code></td>
-</tr>
-<tr class="odd">
-<td><code>Количественный фон</code></td>
-<td><code>площадная сплошная</code></td>
-<td><code>полигон</code>, <code>мультиполигон</code></td>
-</tr>
-<tr class="even">
-<td><code>Изолинии</code></td>
-<td><code>площадная сплошная</code></td>
-<td><code>растр</code>, <code>линия</code>, <code>полигон</code></td>
-</tr>
-<tr class="odd">
-<td><code>Картограммы</code></td>
-<td><code>площадная сплошная</code></td>
-<td><code>полигон</code>, <code>мультиполигон</code></td>
-</tr>
-<tr class="even">
-<td><code>Картодиаграммы</code></td>
-<td><code>площадная сплошная</code></td>
-<td><code>полигон</code>, <code>мультиполигон</code></td>
-</tr>
-<tr class="odd">
-<td><code>Точечный способ</code></td>
-<td><code>площадная рассеянная</code></td>
-<td><code>полигон</code>, <code>мультиполигон</code></td>
-</tr>
-<tr class="even">
-<td><code>Ареалы</code></td>
-<td><code>площадная рассеянная</code></td>
-<td><code>полигон</code>, <code>мультиполигон</code></td>
-</tr>
-<tr class="odd">
-<td><code>Локализованные диаграммы</code></td>
-<td><code>условно точечная</code></td>
-<td><code>точка</code></td>
-</tr>
-</tbody>
-</table>
-<p>При работе с геоинформационным программным обеспечение вам следует иметь в виду, что далеко не все способы изображения доступны для автоматизированного построения. В некоторых случаях требуется конвертация карты в графический формат и её редактирование в графических пакетах.</p>
+<div id="map-use-methods" class="section level2">
+<h2><span class="header-section-number">6.2</span> Приёмы использования карт</h2>
+<p><a href="map-use.html#map-use">В начало справки ⇡</a></p>
 <table>
 <tbody>
 <tr class="odd">
@@ -283,8 +174,8 @@
           </div>
         </div>
       </div>
-<a href="map-math.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="map-create.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="map-generalize.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
