@@ -7,7 +7,7 @@ rmd_files:
     - "Ref02_MathMap.Rmd"
     - "Ref03_MapSymbology.Rmd"
     - "Ref04_MapCreate.Rmd"
-    - "Ref05_Generalization.Rmd"
+    - "Ref05_MapGeneralization.Rmd"
 delete_merged_file: true
 language:
   label:

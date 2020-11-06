@@ -94,8 +94,8 @@
 <li class="chapter" data-level="2.6" data-path="map-math.html"><a href="map-math.html#map-math-tissot"><i class="fa fa-check"></i><b>2.6</b> Построение эллипсов искажения в QGIS</a></li>
 <li class="chapter" data-level="2.7" data-path="map-math.html"><a href="map-math.html#map-math-layout"><i class="fa fa-check"></i><b>2.7</b> Работа с компоновкой в QGIS</a></li>
 <li class="chapter" data-level="2.8" data-path="map-math.html"><a href="map-math.html#map-math-issues"><i class="fa fa-check"></i><b>2.8</b> Варианты решения некоторых технических проблем</a><ul>
-<li class="chapter" data-level="2.8.1" data-path="map-math.html"><a href="map-math.html#некорректное-построение-эллипсов-искажений-и-координатной-сетки"><i class="fa fa-check"></i><b>2.8.1</b> Некорректное построение эллипсов искажений и координатной сетки</a></li>
-<li class="chapter" data-level="2.8.2" data-path="map-math.html"><a href="map-math.html#некорректное-отображение-геометрии"><i class="fa fa-check"></i><b>2.8.2</b> Некорректное отображение геометрии</a></li>
+<li class="chapter" data-level="2.8.1" data-path="map-math.html"><a href="map-math.html#map-math-issues-ellipses"><i class="fa fa-check"></i><b>2.8.1</b> Некорректное построение эллипсов искажений и координатной сетки</a></li>
+<li class="chapter" data-level="2.8.2" data-path="map-math.html"><a href="map-math.html#map-math-issues-selfintersecting"><i class="fa fa-check"></i><b>2.8.2</b> Некорректное отображение геометрии</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="map-symbology.html"><a href="map-symbology.html"><i class="fa fa-check"></i><b>3</b> Способы изображения и графические средства</a><ul>
@@ -345,7 +345,7 @@ PROJCRS[&quot;World_Miller_Cylindrical&quot;,
 <div id="map-math-issues" class="section level2">
 <h2><span class="header-section-number">2.8</span> Варианты решения некоторых технических проблем</h2>
 <p><a href="map-math.html#map-math">В начало справки ⇡</a></p>
-<div id="некорректное-построение-эллипсов-искажений-и-координатной-сетки" class="section level3">
+<div id="map-math-issues-ellipses" class="section level3">
 <h3><span class="header-section-number">2.8.1</span> Некорректное построение эллипсов искажений и координатной сетки</h3>
 <p>Если положение объектов карты и эллипсов искажений не совпадает, вероятно, что у вас возник конфликт системного разделителя. Используемый модуль работает с десятичным разделителем в виде точки. Если у вас в системе настроен десятичный разделитель в виде запятой, его необходимо поменять на точку.</p>
 <p>В ОС <strong>Windows 10</strong> это делается следующим образом:</p>
@@ -378,7 +378,7 @@ PROJCRS[&quot;World_Miller_Cylindrical&quot;,
 </ol>
 <p><img src="images/Ref02/Issue7.png" /></p>
 </div>
-<div id="некорректное-отображение-геометрии" class="section level3">
+<div id="map-math-issues-selfintersecting" class="section level3">
 <h3><span class="header-section-number">2.8.2</span> Некорректное отображение геометрии</h3>
 <p>Иногда при изменении проекции карты возникают проблемы с отображением векторных объектов, как на рисунке ниже.</p>
 <p><img src="images/Ref02/Issue8.png" /></p>
