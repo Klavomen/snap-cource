@@ -35,51 +35,51 @@ favicon: images/favicon.ico
 
 Будет показано приветственное окно мастера установки.
 
-![](images/installation_instruction_win/win01.png)
+![](images/Index0/win01.png)
 
 Нажмите «Далее», чтобы перейти на следующий шаг
 
 На следующем шаге будет показано лицензионное соглашение QGIS и другого программного обеспечения, входящего в пакет поставки.
 
-![](images/installation_instruction_win/win02.png)
+![](images/Index0/win02.png)
 
 Нажмите «Принимаю».
 
 На следующем шаге выберите папку для установки. По возможности используйте расположение, предлагаемое по умолчанию.
 
-![](images/installation_instruction_win/win03.png)
+![](images/Index0/win03.png)
 
 На следующем шаге предлагается выбрать дополнительные компоненты для установки. Снимите все флажки, кроме QGIS, и нажмите «Установить»
 
-![](images/installation_instruction_win/win04.png)
+![](images/Index0/win04.png)
 
 После окончания установки ярлыки QGIS будут добавлены в меню "Пуск" и в отдельную папку QGIS на рабочем столе.
 
-![](images/installation_instruction_win/win05.png)
+![](images/Index0/win05.png)
 
 ### macOS {-}
 
 По состоянию на `r Sys.Date()` для прохождения практикума рекомендуется использовать альтернативную сборку версии [3.4.12](https://www.kyngchaos.com/files/software/qgis/QGIS-macOS-3.4.12-1.dmg){target="_blank"}. Перейдя по ссылке, необходимо согласиться сохранить образ установочного диска  на компьютер (можно разрешить его сразу открыть средствами _DiskImageMounter_):
 
-![](images/installation_instruction_mac/mac01.png)
+![](images/Index0/mac01.png)
 
 После того как образ загрузится и будет открыт, необходимо последовательно запустить три установщика, выделенные на снимке экрана ниже (именно в том порядке, в котором они пронумерованы!):
 
-![](images/installation_instruction_mac/mac02.png)
+![](images/Index0/mac02.png)
 
 Установщики __GDAL Complete__ и __QGIS 3 LTR__ необходимо запускать через контекстное меню и выбирать пункт "Открыть":
 
-![](images/installation_instruction_mac/mac03.png)
+![](images/Index0/mac03.png)
 
 В появившемся диалоговом окне необходимо нажать "Открыть", чтобы разрешить установку:
 
-![](images/installation_instruction_mac/mac04.png)
+![](images/Index0/mac04.png)
 
 Все опции при установке каждой компоненты приложения оставляйте по умолчанию, ничего не меняйте и нажимайте в диалоговых окнах "Продолжить", пока не запустится установщик.
 
 После того как последняя компонента — __QGIS__ — будет установлена, вы сможете найти приложение и запустить его из каталога _Программы_ macOS:
 
-![](images/installation_instruction_mac/mac05.png)
+![](images/Index0/mac05.png)
 
 ### Linux {-}
 
@@ -92,19 +92,19 @@ favicon: images/favicon.ico
 
 Для некоторых операций оформления карты невозможно обойтись только геоинформационным ПО. Открытый графический пакет **Inkscape** доступен для скачивания на [официальном сайте](https://inkscape.org/ru/){target="_blank"}.
 
-![](images/inkscape.png)
+![](images/Index0/inkscape.png)
 
 Выберите дистрибутив для вашей операционной системы.
 
 Если вы устанавливаете Inkscape на Windows, выберите разрядность вашей системы
 
 
-![](images/inkscape3.png)
+![](images/Index0/inkscape3.png)
 
 
 Для скачивания необходимо выбрать **Windows Installer Package** (формат файла MSI).
 
 
-![](images/inkscape4.png)
+![](images/Index0/inkscape4.png)
 
 Установку лучше всего запускать от имени администратора.
