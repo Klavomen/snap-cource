@@ -24,7 +24,7 @@
 <meta name="author" content="Карпачевский А.М." />
 
 
-<meta name="date" content="2020-11-06" />
+<meta name="date" content="2020-11-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -120,10 +120,11 @@
 <li class="chapter" data-level="5" data-path="map-generalize.html"><a href="map-generalize.html"><i class="fa fa-check"></i><b>5</b> Картографическая генерализация</a><ul>
 <li class="chapter" data-level="5.1" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-initial-data"><i class="fa fa-check"></i><b>5.1</b> Исходные данные</a></li>
 <li class="chapter" data-level="5.2" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-methods"><i class="fa fa-check"></i><b>5.2</b> Приёмы генерализации</a></li>
-<li class="chapter" data-level="5.3" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-manual"><i class="fa fa-check"></i><b>5.3</b> Ручные приёмы работы с геометрией</a></li>
-<li class="chapter" data-level="5.4" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-automate"><i class="fa fa-check"></i><b>5.4</b> Автоматизированные приёмы работы с геометрией</a></li>
-<li class="chapter" data-level="5.5" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-query"><i class="fa fa-check"></i><b>5.5</b> Атрибутивные запросы</a></li>
-<li class="chapter" data-level="5.6" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-dissolve"><i class="fa fa-check"></i><b>5.6</b> Слияние объектов по значению атрибутов</a></li>
+<li class="chapter" data-level="5.3" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-preprocessing"><i class="fa fa-check"></i><b>5.3</b> Ручные приёмы работы с геометрией</a></li>
+<li class="chapter" data-level="5.4" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-manual"><i class="fa fa-check"></i><b>5.4</b> Ручные приёмы работы с геометрией</a></li>
+<li class="chapter" data-level="5.5" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-automate"><i class="fa fa-check"></i><b>5.5</b> Автоматизированные приёмы работы с геометрией</a></li>
+<li class="chapter" data-level="5.6" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-query"><i class="fa fa-check"></i><b>5.6</b> Атрибутивные запросы</a></li>
+<li class="chapter" data-level="5.7" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-dissolve"><i class="fa fa-check"></i><b>5.7</b> Слияние объектов по значению атрибутов</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map-use.html"><a href="map-use.html"><i class="fa fa-check"></i><b>6</b> Картографический метод исследования</a><ul>
 <li class="chapter" data-level="6.1" data-path="map-use.html"><a href="map-use.html#map-use-initial-data"><i class="fa fa-check"></i><b>6.1</b> Исходные данные</a></li>
@@ -227,20 +228,43 @@
 </tbody>
 </table>
 </div>
-<div id="map-generalize-geometry-manual" class="section level2">
+<div id="map-generalize-preprocessing" class="section level2">
 <h2><span class="header-section-number">5.3</span> Ручные приёмы работы с геометрией</h2>
 <p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
+<p>Работая с готовым набором данных зачастую возникает необходимость в обрезке территории по некому заданному контуру. В ГИС-пакете QGIS для этого можно воспользоваться специальным инструментом. Например, для обрезки векторного слоя по границе региона выделите с помощью инструмента <img src="images/Ref05/Select.png" /> нужные объекты, после чего они подсветятся жёлтым цветом. В главном меню программы найдите <strong>Вектор – Геообработка – Обрезать…</strong>. Откроется окно, в котором указывается исходный слой и слой, по которому мы хотим обрезать исходный слой. При необходимости ставим галочку, если работа идёт с выделенными объектами. По умолчанию новый слой сохранится как временный, но можно и указать путь для сохранения.</p>
+<div class="figure">
+<img src="images/Ref05/Clip.png" alt="" />
+<p class="caption">Окно инструмента обрезки</p>
+</div>
+<blockquote>
+<p>К сожалению, текущая версия QGIS не поддерживает сохранение внутрь существующей базы данных Geopackage. Вы можете сохранить слой как Geopackage, а потом вручную перенести его из одной базы в другую.</p>
+</blockquote>
+</div>
+<div id="map-generalize-geometry-manual" class="section level2">
+<h2><span class="header-section-number">5.4</span> Ручные приёмы работы с геометрией</h2>
+<p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
+<p>При упрощении, сдвиге и утрировании объектов на карте приходится редактировать геометрию существующих объектов. Для перехода в режим узлов включите редактирование, а затем нажмите на кнопку <img src="images/Ref05/Vertices.png" />. После этого вы сможете левой кнопкой мыши двигать вершины объектов, двигать рёбра и добавлять новые вершины нажатием на плюс. Для удаления вершины нажмите <strong>Delete</strong>.</p>
+<p>Во время работы с уже готовыми слоями векторных данных зачастую приходится редактировать границы двух смежных объектов. Это удобно делать одновременно для двух объектов сразу, а не по отдельности. Такой вид редактирования называется топологическим, и вы его можете найти на панели инструментов прилипания <img src="images/Ref05/Topology_mode.png" />. После этого одним нажатием левой кнопки мыши вы можете выбрать ребро или вершину, перетащить их и вторым нажатием зафиксировать новое положение, либо удалить лишние вершины.</p>
+<div class="figure">
+<img src="images/Ref05/Topology_editing.gif" alt="" />
+<p class="caption">Топологическое редактирование</p>
+</div>
+<p>Для объединения нескольких векторных объектов в один нужно выбрать объекты и нажать на кнопку <img src="images/Ref05/Merge.png" />, которая расположена на панели дополнительных инструментов оцифровки. Перед вами откроется окно, в котором будут показаны атрибуты склеиваемых объектов и атрибут нового объекта в строке <strong>Результат</strong>. Если результирующий атрибут вас не устраивает, вы можете вписать нужное значение в соответствующее поле.</p>
+<div class="figure">
+<img src="images/Ref05/Merge_attributes.png" alt="" />
+<p class="caption">Окно объединения атрибутов объектов</p>
+</div>
 </div>
 <div id="map-generalize-geometry-automate" class="section level2">
-<h2><span class="header-section-number">5.4</span> Автоматизированные приёмы работы с геометрией</h2>
+<h2><span class="header-section-number">5.5</span> Автоматизированные приёмы работы с геометрией</h2>
 <p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
 </div>
 <div id="map-generalize-query" class="section level2">
-<h2><span class="header-section-number">5.5</span> Атрибутивные запросы</h2>
+<h2><span class="header-section-number">5.6</span> Атрибутивные запросы</h2>
 <p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
 </div>
 <div id="map-generalize-dissolve" class="section level2">
-<h2><span class="header-section-number">5.6</span> Слияние объектов по значению атрибутов</h2>
+<h2><span class="header-section-number">5.7</span> Слияние объектов по значению атрибутов</h2>
 <p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
 <table>
 <tbody>
