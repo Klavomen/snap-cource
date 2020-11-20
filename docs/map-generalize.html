@@ -24,7 +24,7 @@
 <meta name="author" content="Карпачевский А.М." />
 
 
-<meta name="date" content="2020-11-19" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -120,11 +120,9 @@
 <li class="chapter" data-level="5" data-path="map-generalize.html"><a href="map-generalize.html"><i class="fa fa-check"></i><b>5</b> Картографическая генерализация</a><ul>
 <li class="chapter" data-level="5.1" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-initial-data"><i class="fa fa-check"></i><b>5.1</b> Исходные данные</a></li>
 <li class="chapter" data-level="5.2" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-methods"><i class="fa fa-check"></i><b>5.2</b> Приёмы генерализации</a></li>
-<li class="chapter" data-level="5.3" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-preprocessing"><i class="fa fa-check"></i><b>5.3</b> Ручные приёмы работы с геометрией</a></li>
+<li class="chapter" data-level="5.3" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-preprocessing"><i class="fa fa-check"></i><b>5.3</b> Подготовка данных</a></li>
 <li class="chapter" data-level="5.4" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-manual"><i class="fa fa-check"></i><b>5.4</b> Ручные приёмы работы с геометрией</a></li>
 <li class="chapter" data-level="5.5" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-automate"><i class="fa fa-check"></i><b>5.5</b> Автоматизированные приёмы работы с геометрией</a></li>
-<li class="chapter" data-level="5.6" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-query"><i class="fa fa-check"></i><b>5.6</b> Атрибутивные запросы</a></li>
-<li class="chapter" data-level="5.7" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-dissolve"><i class="fa fa-check"></i><b>5.7</b> Слияние объектов по значению атрибутов</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map-use.html"><a href="map-use.html"><i class="fa fa-check"></i><b>6</b> Картографический метод исследования</a><ul>
 <li class="chapter" data-level="6.1" data-path="map-use.html"><a href="map-use.html#map-use-initial-data"><i class="fa fa-check"></i><b>6.1</b> Исходные данные</a></li>
@@ -229,7 +227,7 @@
 </table>
 </div>
 <div id="map-generalize-preprocessing" class="section level2">
-<h2><span class="header-section-number">5.3</span> Ручные приёмы работы с геометрией</h2>
+<h2><span class="header-section-number">5.3</span> Подготовка данных</h2>
 <p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
 <p>Работая с готовым набором данных зачастую возникает необходимость в обрезке территории по некому заданному контуру. В ГИС-пакете QGIS для этого можно воспользоваться специальным инструментом. Например, для обрезки векторного слоя по границе региона выделите с помощью инструмента <img src="images/Ref05/Select.png" /> нужные объекты, после чего они подсветятся жёлтым цветом. В главном меню программы найдите <strong>Вектор – Геообработка – Обрезать…</strong>. Откроется окно, в котором указывается исходный слой и слой, по которому мы хотим обрезать исходный слой. При необходимости ставим галочку, если работа идёт с выделенными объектами. По умолчанию новый слой сохранится как временный, но можно и указать путь для сохранения.</p>
 <div class="figure">
@@ -257,27 +255,27 @@
 </div>
 <div id="map-generalize-geometry-automate" class="section level2">
 <h2><span class="header-section-number">5.5</span> Автоматизированные приёмы работы с геометрией</h2>
-<p>[В начало справки ⇡](#map-generalize</p>
-<p>В QGIS доступны некоторые инструменты автоматизированного упрощения геометрии. Выберите в главном меню <strong>Вектор – Обработка геометрии – Simplify…</strong>. Откроется инструмент, упрощающий геометрию объектов. Для линейных объектов рекомендуется выбирать алгоритм Дугласа-Пейкера. Инструмент создаёт новый класс объектов.</p>
+<p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
+<p>В QGIS доступны некоторые инструменты автоматизированного упрощения геометрии. Выберите в главном меню <strong>Вектор – Обработка геометрии – Simplify…</strong>. Откроется инструмент, упрощающий геометрию объектов. Для линейных объектов рекомендуется выбирать алгоритм Дугласа-Пейкера.</p>
 <div class="figure">
 <img src="images/Ref05/Simplify.png" alt="" />
 <p class="caption">Окно инструмента упрощения</p>
 </div>
 <p>Данный алгоритм убирает вершины согласно заданному порогу, который устанавливается пользователем на основе масштаба и детализации исходных данных.</p>
 <p>К полигональным слоям этот инструмент тоже применим, но его работа не всегда корректна – на стыке трёх или более объектов возникают топологические ошибки (дырки и наложения), поэтому его применять следует осторожно не для сплошного покрытия полигональных объектов.</p>
-<p>Упрощение объектов доступно в индивидуальном порядке на панели инструментов дополнительной оцифровки. Выбрав редактируемый слой в режиме редактирования, нажмите на кнопку <img src="images/Ref05/Simplify_button.png" />, после чего кликните по объекту, который вы хотите упростить. Откроется маленькое окошко, в котором можно выбрать метод сглаживания, либо упрощения.</p>
+<p>В QGIS есть инструмент для сглаживания векторных объектов. Для его использования нужно открыть окно <strong>Инструментов анализа</strong> и в нём найти инструмент <strong>Векторная геометрия – Сглаживание</strong>.</p>
+<div class="figure">
+<img src="images/Ref05/Smooth.png" alt="" />
+<p class="caption">Окно инструмента сглаживания</p>
+</div>
+<blockquote>
+<p>Обратите внимание, что оба инструмента не изменяют текущий слой, а создают новый.</p>
+</blockquote>
+<p>Упрощение и сглаживание объектов доступно в индивидуальном порядке в текущем слое на панели инструментов дополнительной оцифровки. Выбрав редактируемый слой в режиме редактирования, нажмите на кнопку <img src="images/Ref05/Simplify_button.png" />, после чего кликните по объекту, который вы хотите упростить. Откроется маленькое окошко, в котором можно выбрать метод сглаживания, либо упрощения.</p>
 <div class="figure">
 <img src="images/Ref05/Simplifying.png" alt="" />
 <p class="caption">Окно выбора метода упрощения и сглаживания</p>
 </div>
-</div>
-<div id="map-generalize-query" class="section level2">
-<h2><span class="header-section-number">5.6</span> Атрибутивные запросы</h2>
-<p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
-</div>
-<div id="map-generalize-dissolve" class="section level2">
-<h2><span class="header-section-number">5.7</span> Слияние объектов по значению атрибутов</h2>
-<p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
 <table>
 <tbody>
 <tr class="odd">
