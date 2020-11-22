@@ -2,9 +2,13 @@
 
 ## Исходные данные {#map-generalize-initial-data}
 
-[Бланк задания](){target="_blank"}
+[Бланк задания](https://yadi.sk/i/skQX5kEeM74goQ){target="_blank"}
 
-[База данных](){target="_blank"}
+[База данных земельных ресурсов России в формате Geopackage (полная)](https://yadi.sk/d/K2oSf5-GVi2ovg){target="_blank"}
+
+[Базы данных по тематикам](https://yadi.sk/d/V7tUX7dYGBjkOQ){target="_blank"}
+
+[Данные по земельным ресурсам России на официальном сайте](https://webarchive.iiasa.ac.at/Research/FOR/russia_cd/download.htm#download){target="_blank"}
 
 ## Приёмы генерализации {#map-generalize-methods}
 [В начало справки ⇡](#map-generalize)
