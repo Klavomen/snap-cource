@@ -128,6 +128,8 @@
 <li class="chapter" data-level="6" data-path="map-use.html"><a href="map-use.html"><i class="fa fa-check"></i><b>6</b> Картографический метод исследования</a><ul>
 <li class="chapter" data-level="6.1" data-path="map-use.html"><a href="map-use.html#map-use-initial-data"><i class="fa fa-check"></i><b>6.1</b> Исходные данные</a></li>
 <li class="chapter" data-level="6.2" data-path="map-use.html"><a href="map-use.html#map-use-methods"><i class="fa fa-check"></i><b>6.2</b> Приёмы использования карт</a></li>
+<li class="chapter" data-level="6.3" data-path="map-use.html"><a href="map-use.html#map-use-grid"><i class="fa fa-check"></i><b>6.3</b> Построение регулярных сеток</a></li>
+<li class="chapter" data-level="6.4" data-path="map-use.html"><a href="map-use.html#map-use-calculation"><i class="fa fa-check"></i><b>6.4</b> Расчёт значений на сетку</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -281,7 +283,7 @@
 <div id="map-generalize-geometry-sql" class="section level2">
 <h2><span class="header-section-number">5.6</span> Ценз отбора через SQL-запрос</h2>
 <p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
-<p>SQL – Structered query language (структурированный язык запросов) – очень надёжный и удобный способ делать выборки объектов в базе данных ГИС по значениям их атрибутов. Подробнее об SQL-запросах вы узнаете из курса <em>Основы геоинформатики</em>, а сейчас мы ограничимся простым примером, как можно выбрать, например, все реки, длина которых менее, чем заданный ценз отбора.</p>
+<p><strong>SQL</strong> – Structered query language (структурированный язык запросов) – очень надёжный и удобный способ делать выборки объектов в базе данных ГИС по значениям их атрибутов. Подробнее об SQL-запросах вы узнаете из курса <em>Основы геоинформатики</em>, а сейчас мы ограничимся простым примером, как можно выбрать, например, все реки, длина которых менее, чем заданный ценз отбора.</p>
 <p>Для выборки объектов нужно открыть атрибутивную таблицу соответствующего слоя. Наверху таблицы найдите кнопку <img src="images/Ref05/Query_button.png" />. Откроется окно, состоящие из трёх вложенных окон. В левом окне пишется собственно запрос, в центральном окне можно выбрать названия атрибутов, значения атрибутов, функции и прочее, в правом окне даётся текстовая справка.</p>
 <div class="figure">
 <img src="images/Ref05/SQL.png" alt="" />
