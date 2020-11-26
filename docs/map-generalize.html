@@ -24,7 +24,7 @@
 <meta name="author" content="Карпачевский А.М." />
 
 
-<meta name="date" content="2020-11-22" />
+<meta name="date" content="2020-11-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -123,6 +123,7 @@
 <li class="chapter" data-level="5.3" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-preprocessing"><i class="fa fa-check"></i><b>5.3</b> Подготовка данных</a></li>
 <li class="chapter" data-level="5.4" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-manual"><i class="fa fa-check"></i><b>5.4</b> Ручные приёмы работы с геометрией</a></li>
 <li class="chapter" data-level="5.5" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-automate"><i class="fa fa-check"></i><b>5.5</b> Автоматизированные приёмы работы с геометрией</a></li>
+<li class="chapter" data-level="5.6" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-sql"><i class="fa fa-check"></i><b>5.6</b> Ценз отбора через SQL-запрос</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map-use.html"><a href="map-use.html"><i class="fa fa-check"></i><b>6</b> Картографический метод исследования</a><ul>
 <li class="chapter" data-level="6.1" data-path="map-use.html"><a href="map-use.html#map-use-initial-data"><i class="fa fa-check"></i><b>6.1</b> Исходные данные</a></li>
@@ -276,6 +277,17 @@
 <img src="images/Ref05/Simplifying.png" alt="" />
 <p class="caption">Окно выбора метода упрощения и сглаживания</p>
 </div>
+</div>
+<div id="map-generalize-geometry-sql" class="section level2">
+<h2><span class="header-section-number">5.6</span> Ценз отбора через SQL-запрос</h2>
+<p><a href="map-generalize.html#map-generalize">В начало справки ⇡</a></p>
+<p>SQL – Structered query language (структурированный язык запросов) – очень надёжный и удобный способ делать выборки объектов в базе данных ГИС по значениям их атрибутов. Подробнее об SQL-запросах вы узнаете из курса <em>Основы геоинформатики</em>, а сейчас мы ограничимся простым примером, как можно выбрать, например, все реки, длина которых менее, чем заданный ценз отбора.</p>
+<p>Для выборки объектов нужно открыть атрибутивную таблицу соответствующего слоя. Наверху таблицы найдите кнопку <img src="images/Ref05/Query_button.png" />. Откроется окно, состоящие из трёх вложенных окон. В левом окне пишется собственно запрос, в центральном окне можно выбрать названия атрибутов, значения атрибутов, функции и прочее, в правом окне даётся текстовая справка.</p>
+<div class="figure">
+<img src="images/Ref05/SQL.png" alt="" />
+<p class="caption">Выражение для запроса всех рек с длиной менее 100 км</p>
+</div>
+<p>В разделе *<strong>Поля и значения</strong> выберите название поля, по которому осуществляется запрос, дважды щёлкните, чтобы оно появилось в левом окошке. В разделе <strong>Операторы</strong> выберите соответствующий оператор. Справа от оператора укажите соответствующее значение ценза в единицах измерения слоя.</p>
 <table>
 <tbody>
 <tr class="odd">
