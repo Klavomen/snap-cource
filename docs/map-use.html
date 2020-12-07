@@ -24,7 +24,7 @@
 <meta name="author" content="Карпачевский А.М." />
 
 
-<meta name="date" content="2020-11-26" />
+<meta name="date" content="2020-12-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -127,9 +127,11 @@
 </ul></li>
 <li class="chapter" data-level="6" data-path="map-use.html"><a href="map-use.html"><i class="fa fa-check"></i><b>6</b> Картографический метод исследования</a><ul>
 <li class="chapter" data-level="6.1" data-path="map-use.html"><a href="map-use.html#map-use-initial-data"><i class="fa fa-check"></i><b>6.1</b> Исходные данные</a></li>
-<li class="chapter" data-level="6.2" data-path="map-use.html"><a href="map-use.html#map-use-methods"><i class="fa fa-check"></i><b>6.2</b> Приёмы использования карт</a></li>
-<li class="chapter" data-level="6.3" data-path="map-use.html"><a href="map-use.html#map-use-grid"><i class="fa fa-check"></i><b>6.3</b> Построение регулярных сеток</a></li>
-<li class="chapter" data-level="6.4" data-path="map-use.html"><a href="map-use.html#map-use-calculation"><i class="fa fa-check"></i><b>6.4</b> Расчёт значений на сетку</a></li>
+<li class="chapter" data-level="6.2" data-path="map-use.html"><a href="map-use.html#map-use-links"><i class="fa fa-check"></i><b>6.2</b> Полезные ссылки с пространственными данными</a></li>
+<li class="chapter" data-level="6.3" data-path="map-use.html"><a href="map-use.html#map-use-methods"><i class="fa fa-check"></i><b>6.3</b> Приёмы использования карт</a></li>
+<li class="chapter" data-level="6.4" data-path="map-use.html"><a href="map-use.html#map-use-grid"><i class="fa fa-check"></i><b>6.4</b> Построение регулярных сеток</a></li>
+<li class="chapter" data-level="6.5" data-path="map-use.html"><a href="map-use.html#map-use-calculation"><i class="fa fa-check"></i><b>6.5</b> Расчёт значений на сетку территориального деления</a></li>
+<li class="chapter" data-level="6.6" data-path="map-use.html"><a href="map-use.html#map-use-surface"><i class="fa fa-check"></i><b>6.6</b> Построение геополей</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -155,18 +157,22 @@
 <h1><span class="header-section-number">Справка 6</span> Картографический метод исследования</h1>
 <div id="map-use-initial-data" class="section level2">
 <h2><span class="header-section-number">6.1</span> Исходные данные</h2>
-<p><a href="" target="_blank">Бланк задания</a></p>
+<p><a href="https://yadi.sk/i/3F-Zp7v-FCc0yA" target="_blank">Бланк задания</a></p>
+</div>
+<div id="map-use-links" class="section level2">
+<h2><span class="header-section-number">6.2</span> Полезные ссылки с пространственными данными</h2>
+<p><a href="map-use.html#map-use">В начало справки ⇡</a></p>
 <p><a href="https://www.naturalearthdata.com/downloads/" target="_blank">Данные Natural Earth</a></p>
-<p><a href="download.geofabrik.de" target="_blank">Данные OpenStreetMap</a></p>
+<p><a href="http://download.geofabrik.de/" target="_blank">Данные OpenStreetMap</a></p>
 <p><a href="http://www.vsegei.com/ru/info/topo/" target="_blank">Цифровая общегеографическая основа ВСЕГЕИ</a></p>
 <p><a href="https://gadm.org/data.html" target="_blank">Многоуровневое административное деление на мир и на отдельные страны</a></p>
 </div>
 <div id="map-use-methods" class="section level2">
-<h2><span class="header-section-number">6.2</span> Приёмы использования карт</h2>
+<h2><span class="header-section-number">6.3</span> Приёмы использования карт</h2>
 <p><a href="map-use.html#map-use">В начало справки ⇡</a></p>
 </div>
 <div id="map-use-grid" class="section level2">
-<h2><span class="header-section-number">6.3</span> Построение регулярных сеток</h2>
+<h2><span class="header-section-number">6.4</span> Построение регулярных сеток</h2>
 <p><a href="map-use.html#map-use">В начало справки ⇡</a></p>
 <p>Для построения регулярных сеток используйте инструмент <strong>Вектор – Выборка – Create Grid…</strong>. В строке параметра <strong>Grid type</strong> можно выбрать тип регулярной сетки: точки, линии, прямоугольник, ромб и гексагон. В строках <strong>Horizontal spacing</strong> и <strong>Vertical spacing</strong> указываются размеры ячеек. В строках <strong>Horizontal overlay</strong> и <strong>Vertical overlay</strong> задаётся перекрытие между ячейками. Лучше всего в качестве системы координат указывать проекцию, а результат сохранять либо в шейпфайл, либо в существующую базу данных Geopackage.</p>
 <div class="figure">
@@ -175,18 +181,18 @@
 </div>
 </div>
 <div id="map-use-calculation" class="section level2">
-<h2><span class="header-section-number">6.4</span> Расчёт значений на сетку</h2>
+<h2><span class="header-section-number">6.5</span> Расчёт значений на сетку территориального деления</h2>
 <p><a href="map-use.html#map-use">В начало справки ⇡</a></p>
-<p>Мы можем рассчитывать количество точек для каждой ячейки в пределах регулярной сетки. Для этого используется инструмент <strong>Вектор – Анализ – Подсчитать точки в полигоне…</strong>. В этом инструменте указывается слой с соответствующими полигонами и слой с точками, плотность которых мы хотим получить.</p>
+<p>Мы можем рассчитывать количество точек для каждой ячейки в пределах сетки территориального деления. Для этого используется инструмент <strong>Вектор – Анализ – Подсчитать точки в полигоне…</strong>. В этом инструменте указывается слой с соответствующими полигонами и слой с точками, плотность которых мы хотим получить.</p>
 <blockquote>
 <p>Обратите внимание, что под входными слоями можно выставить опцию для учёта только выбранных объектов. Это оправдано в случае, если вы работаете только с частью данных, а обработка занимает продолжительное время.</p>
 </blockquote>
-<p>В качесте поля взвешевания можно указывать численное атрибутивное поле, например, численность населения.</p>
+<p>В качестве поля взвешевания можно указывать численное атрибутивное поле, например, численность населения.</p>
 <div class="figure">
 <img src="images/Ref06/Points_in_grid.png" alt="" />
 <p class="caption">Инструмент расчёта количества точек в ячейках</p>
 </div>
-<p>Для линейных объектов можно использовать инструмент <strong>Вектор – Анализ – Пересечения линий…</strong>. Он работает аналогично предыдущему инструменту.</p>
+<p>Для линейных объектов можно использовать инструмент <strong>Вектор – Анализ – Сумма расстояний…</strong>. Он работает аналогично предыдущему инструменту.</p>
 <div class="figure">
 <img src="images/Ref06/Lines_in_grid.png" alt="" />
 <p class="caption">Инструмент расчёта длины линий в ячейках</p>
@@ -200,6 +206,15 @@
 <p>Обратие внимание, что функция <strong>$area</strong> считает площадь на эллипсоиде, а не в проекции.</p>
 </blockquote>
 <p>Для расчёта относительных значений вы можете написать соответствующее выражение из отдельных атрибутивных полей, выбрав их названия в разделе <strong>Поля и значения</strong>.</p>
+</div>
+<div id="map-use-surface" class="section level2">
+<h2><span class="header-section-number">6.6</span> Построение геополей</h2>
+<p><a href="map-use.html#map-use">В начало справки ⇡</a></p>
+<p>При построении геополей с помощью геоинформационных инструментов мы переходим к растровой модели данных.</p>
+<blockquote>
+<p>Растр – регулярно-ячеистая модель данных, где каждой ячейке (пикселю) соответствует какое-либо значение.</p>
+</blockquote>
+<p>Один из инструментов континуализации – построение поверхности ядерной плотности (kernel density), которая также известна за рубежом как тепловая карта (heatmap).</p>
 <table>
 <tbody>
 <tr class="odd">
