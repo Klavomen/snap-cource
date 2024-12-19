@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Calculation of Optical Images Data: SNAP Course</title>
+    <meta name="description" content="SNAP course for specialists" />
+    <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+    <meta property="og:title" content="SNAP course for specialists" />
+    <meta property="og:type" content="book" />
+    <meta property="og:description" content="SNAP course for specialists" />
+    <meta name="github-repo" content="klavomen/snap-course" /> 
+  <meta name="author" content="M. Shiryaev, E. Epiphanova, D. Nikolayev, D. Kornilov on base of A. Karpachevskiy's site" />
+  <meta name="date" content="2020-12-07" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="next" href="map-topo.html"/>
+  <script src="libs/jquery-2.2.3/jquery.min.js"></script>
+  <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+  <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+<body>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+    <div class="book-summary">
+      <nav role="navigation">
+        <ul class="summary">
+          <li><a href="./">SNAP Course</a></li>
+          <li class="divider"></li>
+          <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Software for course completion</a>
+            <ul>
+              <li class="chapter" data-level="" data-path="index.html"><a href="index.html#snap"><i class="fa fa-check"></i>SNAP</a></li>
+            </ul>
+          </li>
+          <li class="chapter" data-level="1" data-path="snap-introduction.html"><a href="snap-introduction.html"><i class="fa fa-check"></i><b>1</b> Basic abilities and data sources</a>
+            <ul>
+              <li class="chapter" data-level="1.1" data-path="snap-introduction.html"><a href="snap-introduction.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+              <li class="chapter" data-level="1.2" data-path="snap-introduction.html"><a href="snap-introduction.html#interface"><i class="fa fa-check"></i><b>1.2</b> SNAP Interface</a></li>
+              <li class="chapter" data-level="1.3" data-path="snap-introduction.html"><a href="snap-introduction.html#data-sources"><i class="fa fa-check"></i><b>1.3</b> Data Sources and Downloading Images</a></li>
+              <li class="chapter" data-level="1.4" data-path="snap-introduction.html"><a href="snap-introduction.html#data-import"><i class="fa fa-check"></i><b>1.4</b> Data import</a></li>
+              <li class="chapter" data-level="1.5" data-path="snap-introduction.html"><a href="snap-introduction.html#raster-cropping"><i class="fa fa-check"></i><b>1.5</b> Raster cropping</a></li>
+              <li class="chapter" data-level="1.6" data-path="snap-introduction.html"><a href="snap-introduction.html#data-visualization"><i class="fa fa-check"></i><b>1.6</b> Data visualization</a></li>
+              <li class="chapter" data-level="1.7" data-path="snap-introduction.html"><a href="snap-introduction.html#data-export"><i class="fa fa-check"></i><b>1.7</b> Images Export</a></li>
+            </ul>
+          </li>
+          <li class="chapter" data-level="2" data-path="basic-calc.html"><a href="basic-calc.html"><i class="fa fa-check"></i><b>2</b> Calculation of Optical Images Data</a>
+            <ul>
+              <li class="chapter" data-level="2.1" data-path="basic-calc.html"><a href="basic-calc.html#masking"><i class="fa fa-check"></i><b>2.1</b> Sea and land masking</a></li>
+              <li class="chapter" data-level="2.2" data-path="basic-calc.html"><a href="basic-calc.html#tools-calc"><i class="fa fa-check"></i><b>2.2</b> Raster Calculations by SNAP Tools</a></li>
+              <li class="chapter" data-level="2.3" data-path="basic-calc.html"><a href="basic-calc.html#raster-calc"><i class="fa fa-check"></i><b>2.3</b> Raster Calculator</a></li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SNAP course for specialists</a>
+          </h1>
+        </div>
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+            <section class="normal" id="section-">
+            <div id="basic-calc" class="section level1">
+              <h1><span class="header-section-number">Class 2</span> Calculation of Optical Images Data</h1>
+              <p>Class objectives:
+                <ol>
+                  <li>Sea and Land masking of Raster Data</li>
+                  <li>Raster Calculations by SNAP Tools and by your own formulas</li>
+                  <li>Exploring basic analysis tools and Thematic Processors</li>
+                </ol>
+              </p>
+              <p>This lesson focuses on basic skills for working with optical images. Once you have learnt what SNAP is, what it is for and how to load and open optical images, you need to learn how to perform basic operations with them. First of all, you may need pixel masking, basic index calculation, basic analysis tools, image calculator and thematic processors.</p>
+            <div id="data-import" class="section level2">
+              <h2><span class="header-section-number">2.1.</span> Sea and Land Masking</h2>
+              <p><a href="basic-calc.html#basic-calc">Back to the beginning ⇡</a></p>
+              <p>In this part, we will familiarise ourselves with the elements for masking. Work with masks is carried out through a special window: “Mask manager”. You can open this window through <i>View -> Tool Windows -> Mask Manager</i>.</p>
+              <div>
+                <img src="images/Ref02/MaskManager.png" alt="" />
+                <p class="caption">Mask Manager Window</p>
+              </div>
+              <p>In this window you can interact with the image masks. You can customise the visibility of masks by ticking the checkbox in the column <img src="images/Ref02/visibilityColumn.png" alt=""> You can also customise the mask layer name, colour, transparency and description.</p>
+              <p>If you have one mask layer selected, the following options are available <img src="images/Ref02/SingleMaskOptions.png" alt="">These tools allow you to: copy, edit, remove, transfer the selected mask to other products, import, export, zooms to selected masks. If you have multiple layers selected, you can't copy and paste, but you can use the geoprocessing tools <img src="images/Ref02/MultipleMaskOptions.png" alt="">These are the tools that make it possible: creates the union, intersections, the difference (top and down) and complement.</p>
+              <p>You can create your own mask by selecting a polygon with the digitising tool <img src="images/Ref02/NewVectorMask.png" alt="">.</p>
+              <p>Also you can create a mask built over the range of the band <img src="images/Ref02/RangeMaskButton.png" alt="">. The minimum and maximum value of the range is specified here. The brightnesses in the range will be sampled and a mask matching this condition will be created. Raster could be masked by logical mathematical expression <img src="images/Ref02/ExpressionMaskButton.png" alt="">.</p>
+              <div>
+                <img src="images/Ref02/RangeMaskInterface.png" alt="" width="300px"/>
+                <p class="caption">Range Mask Creation Window</p>
+              </div>
+              <p>If the imported dataset has not preprocessed land or water masks, SNAP can compute them by integrated tool <i>Land/sea mask</i>. In Processing Parameters choose bands, which will take part in mask computing.</p>
+              <div>
+                <img src="images/Ref02/LandSeaMaskInterfaca.png" alt="" width="400px"/>
+                <p class="caption">Land/Sea Mask Window</p>
+              </div>
+
+            </div>
+
+            
+<table>
+<tbody>
+<tr class="odd">
+<td><em>Shiryaev M. et. al</em> <strong>SNAP Course for Specialists</strong>. 
+  Moscow: Department of Geography, MSU, 2024.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="map-math.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["cartography-course.pdf", "cartography-course.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
