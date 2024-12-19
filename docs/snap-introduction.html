@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SNAP Course</title>
+    <meta name="description" content="SNAP course for specialists" />
+    <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+    <meta property="og:title" content="SNAP course for specialists" />
+    <meta property="og:type" content="book" />
+    <meta property="og:description" content="SNAP course for specialists" />
+    <meta name="github-repo" content="klavomen/snap-course" /> 
+  <meta name="author" content="M. Shiryaev, E. Epiphanova, D. Nikolayev, D. Kornilov on base of A. Karpachevskiy's site" />
+  <meta name="date" content="2020-12-07" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="next" href="map-topo.html"/>
+  <script src="libs/jquery-2.2.3/jquery.min.js"></script>
+  <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+  <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+<body>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+    <div class="book-summary">
+      <nav role="navigation">
+        <ul class="summary">
+          <li><a href="./">SNAP Course</a></li>
+          <li class="divider"></li>
+          <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Software for course completion</a>
+            <ul>
+              <li class="chapter" data-level="" data-path="index.html"><a href="index.html#snap"><i class="fa fa-check"></i>SNAP</a></li>
+            </ul>
+          </li>
+          <li class="chapter" data-level="1" data-path="snap-introduction.html"><a href="snap-introduction.html"><i class="fa fa-check"></i><b>1</b> Basic abilities and data sources</a>
+            <ul>
+              <li class="chapter" data-level="1.1" data-path="snap-introduction.html"><a href="snap-introduction.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+              <li class="chapter" data-level="1.2" data-path="snap-introduction.html"><a href="snap-introduction.html#interface"><i class="fa fa-check"></i><b>1.2</b> SNAP Interface</a></li>
+              <li class="chapter" data-level="1.3" data-path="snap-introduction.html"><a href="snap-introduction.html#data-sources"><i class="fa fa-check"></i><b>1.3</b> Data Sources and Downloading Images</a></li>
+              <li class="chapter" data-level="1.4" data-path="snap-introduction.html"><a href="snap-introduction.html#data-import"><i class="fa fa-check"></i><b>1.4</b> Data import</a></li>
+              <li class="chapter" data-level="1.5" data-path="snap-introduction.html"><a href="snap-introduction.html#raster-cropping"><i class="fa fa-check"></i><b>1.5</b> Raster cropping</a></li>
+              <li class="chapter" data-level="1.6" data-path="snap-introduction.html"><a href="snap-introduction.html#data-visualization"><i class="fa fa-check"></i><b>1.6</b> Data visualization</a></li>
+              <li class="chapter" data-level="1.7" data-path="snap-introduction.html"><a href="snap-introduction.html#data-export"><i class="fa fa-check"></i><b>1.7</b> Images Export</a></li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SNAP course for specialists</a>
+          </h1>
+        </div>
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+            <section class="normal" id="section-">
+            <div id="map-topo" class="section level1">
+              <h1><span class="header-section-number">Class 1</span> Basic abilities and data sources</h1>
+              <p>Class objectives:
+                <ol>
+                  <li>Getting to know the interface</li>
+                  <li>Loading and visualizing data</li>
+                  <li>Exploring basic tools for data processing</li>
+                </ol>
+              </p>
+              <div id="introduction" class="section level2">
+                <h2><span class="header-section-number">1.1</span> What is SNAP?</h2>
+                <p><a href="snap-introduction.html#introduction">Back to the beginning ⇡</a></p>
+                <h3>What is SNAP?</h3>
+                <p>The Sentinel Application Platform (SNAP) is a free, open-source software developed by Brockmann Consult, SkyWatch, Sensar, and C-S, and supported by the European Space Agency (ESA) specifically for processing and analyzing data from the Sentinel satellite missions, as well as other Earth observation datasets. It is designed to support data from Sentinel-1 (radar), Sentinel-2 (optical), and Sentinel-3 (optical, altimetry, and radiometry) satellites, part of the Copernicus program, which monitors Earth's environment.</p>
+                <ul style="list-style-type: decimal">
+                  <li><p>SNAP offers several toolboxes, designed to work with specific data types and tasks: Optical Toolbox: processes optical satellite data, such as images from Sentinel-2 and Landsat </p></li>
+                  <li><p>Microwave Toolbox: processes microwave data, including Sentinel-1 radar data. Enabling tasks like synthetic aperture radar (SAR) processing, speckle filtering, and radar data interpretation</p></li>
+                  <li><p>SMOS Toolbox: processes data from the Soil Moisture and Ocean Salinity (SMOS) satellite.</p></li>
+                </ul>
+                <p>Beyond Sentinel, SNAP supports data from other Earth observation missions, such as Landsat, MODIS, PROBA-V and Envisat.</p>
+                <p>SNAP includes a wide range of tools for remote sensing image processing such as radiometric and geometric correction, atmospheric correction, spectral indices computation, filtering and image enhancement. It provides tools for visualizing satellite images, working with RGB composites, analyzing histograms, and overlaying different bands to interpret land, water, and vegetation features.</p>
+                <p>SNAP's architecture allows users to extend functionality with custom plugins and scripts (Python, Java), allowing for more specialized analysis and research applications. SNAP offers options for automating tasks, allowing users to process large volumes of satellite data with batch processing and command-line tools. This is especially useful for time-series analysis and monitoring environmental changes.</p>
+                <p>SNAP can be used in a variety of application areas, including but not limited to:</p>
+                <ol start="1" style="list-style-type: decimal">
+                  <li><p><u>Land Monitoring</u>: Analyses of land cover and land use changes, vegetation health, and soil properties. This includes agricultural monitoring, deforestation tracking, and urban development analysis.</p></li>
+                  <li><p><u>Oceanography</u>: Monitoring of sea surface temperature and marine pollution, which is crucial for understanding marine ecosystems</p></li>
+                  <li><p><u>Atmospheric Studies</u>: Tracking atmospheric conditions, air quality, and greenhouse gas concentrations, which helps in climate change research and pollution control.</p></li>
+                  <li><p><u>Disaster Management</u>: Assessing and responding to natural disasters like floods, wildfires, and earthquakes.</p></li>
+                  <li><p><u>Hydrology</u>: Monitoring water bodies, including river discharge, water quality, and glacier dynamics, which is important for water resource management.</p></li>
+                  <li><p><u>Biodiversity and Conservation</u>: Mapping habitats and tracking changes in biodiversity, which is useful for conservation efforts and habitat restoration projects.</p></li>
+                  <li><p><u>Urban Planning</u>: Analyzing urban sprawl, infrastructure development, and environmental impacts of urbanization.</p></li>
+                  <li><p><u>Climate Research</u>: Studying the impacts of climate change on various ecosystems and human activities, including long-term environmental monitoring and climate modeling.</p></li>
+                </ol>
+              </div>
+            <div id="interface" class="section level2">
+              <h2><span class="header-section-number">1.2</span> SNAP Interface</h2>
+              <p><a href="snap-introduction.html#introduction">Back to the beginning ⇡</a></p>
+              <p>The Sentinel Application Platform has a user-friendly interface designed to facilitate the visualization, analysis, and processing of Earth observation data.</p>
+              <p>The Sentinel Toolbox Menu Bar contains: File Menu, Edit Menu, View Menu, Analysis Menu, Layer Menu, Vector Menu, Raster Menu, Optical Menu, Radar Menu, Tools Menu, Window Menu, Help Menu.</p>
+              <div class="figure">
+                <img src="images/Ref01/SNAP-application.png" alt="" />
+                <p class="caption">SNAP main interface</p>
+              </div>
+              <p>The Image View on the right side of program window displays the sample values of raster datasets such as bands and tie-point grids as an image. The view uses tiled images and image pyramids, and therefore has a good image display performance and memory usage. Additionally the view is enhanced with a navigation control which can be used to zoom and rotate the image.</p>
+              <p>A new Image View is simply created by double-clicking on a tie-point grid or spectral/geophysical band. You can open as many images as your computer's RAM allows. After you have opened an Image View you can inspect the images with the Navigation Window. After you have opened an Image View you can modify the colors of the image using the Colour Manipulation window or overlay an opaque or semi-transparent data mask with the Mask Manager. Both tool windows operate in non-modal mode, which means they float over the main frame and you can place them somewhere on your desktop.</p>
+              <div class="figure">
+                <img src="images/Ref01/SNAP-viewport.png" alt="" />
+                <p class="caption">Image View Window</p>
+              </div>
+              <p>If you create a new, open or import an existing data product, the Sentinel Toolbox will put it into it's open product list in the Product Explorer window on the left side of the program window. The product list is a tree view with up to four root nodes for each open product - Bands, Vector data, Tie-point grids and other data.</p>
+              <div class="figure">
+                <img src="images/Ref01/SNAP-prod-explorer.png" alt="" />
+                <p class="caption">Product Explorer Window</p>
+              </div>
+              <p>If you click on the tab 'Pixel View', pixel information will be displayed while you move the mouse over the band image view.</p>
+              <div>
+                <img src="images/Ref01/PixelView.png" alt="" />
+                <p class="caption">Pixel Info View</p>
+              </div>
+              <p>The Navigation Window located under the Product Explorer tab is used to move the viewport of an Image View, to zoom in and out of it and to rotate the image in steps of 5 degrees using the spinner control below the image preview. The current viewport is depicted by a semi-transparent rectangle which can be dragged in order to move the viewport to another location. It also provides a slider used to zoom in and out of the view.</p>
+              <div>
+                <img src="images/Ref01/NavigationWindow.png" alt="" />
+                <p class="caption">Navigation Window</p>
+              </div>
+              <p>The Tool Windows of the Sentinel Toolbox provide access to tools, as the name says. These windows can be floating, docked or tabbed. This docking concept allows a tidy workspace and you can arrange all tool windows as you like. All changes you apply to the layout will be saved for the next start of the Toolbox. All tool bars are, like the Tool Windows, draggable and dockable. If they are not docked you can close them to get more free work space. To reactive a closed toolbar you can go the "Tool Bars" entry in the "View" menu and enable the toolbar. The Sentinel Toolbox commands are grouped in multiple tool bars by their purpose and include standard, layers, analysis, tools and windows toolbars.</p>
+              <div>
+                <img src="images/Ref01/Toolbars.png" alt="" />
+                <p class="caption">SNAP Toolbars</p>
+              </div>
+            </div>
+            <div id="map-topo-vectorization" class="section level2">
+              <h2><span class="header-section-number">1.3</span> Data Sources and Downloading Images</h2>
+              <p><a href="snap-introduction.html#introduction">Back to the beginning ⇡</a></p>
+              <p>Some primary data sources that you can use to work in SNAP are listed in the table below. For more information about Data Access Details and Distribution Policy it is recommended to visit the <a href="https://step.esa.int/main/wp-content/help/versions/11.0.0/snap/org.esa.snap.snap.help/general/overview/SnapDataSources.html">ESA website</a>.</p>
+              <table>
+                <tbody><tr valign="top">
+                <td>&nbsp;</td>
+                <td><b><u>Instrument</u></b></td>
+                <td><b><u>Platform</u></b></td>
+                <td><b><u>Format</u></b></td>
+                <td><b><u>Links</u></b></td>
+                </tr>
+                <tr valign="top">
+                <td>1</td>
+                <td>MERIS</td>
+                <td>Envisat</td>
+                <td>Envisat N1 / SAFE</td>
+                <td>ESA Online Dissemination: <a href="https://meris-ds.eo.esa.int/oads/access/collection" target="_blank"><u>https://meris-ds.eo.esa.int/oads/access/collection</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>2</td>
+                <td>(A)ATSR</td>
+                <td>ERS / Envisat</td>
+                <td>ERS / Envisat N1</td>
+                <td>ESA User Services Portal: <a href="https://esatellus.service-now.com/csp?id=dar_fast&amp;dataset=EnvisatAATSRL1BBrightnessTemperatureRadianceAT1RBT" target="_blank"><u>https://esatellus.service-now.com/</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>3</td>
+                <td>ASAR</td>
+                <td>Envisat</td>
+                <td>Envisat N1</td>
+                <td>ESA (A)SAR Online Dissemination Service: <a href="https://esar-ds.eo.esa.int" target="_blank"><u>https://esar-ds.eo.esa.int</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>4</td>
+                <td>SAR</td>
+                <td>ERS</td>
+                <td>Envisat N1</td>
+                <td>ESA (A)SAR Online Dissemination Service: <a href="https://esar-ds.eo.esa.int" target="_blank"><u>https://esar-ds.eo.esa.int</u></a> .</td>
+                </tr>
+                <tr valign="top">
+                <td>5</td>
+                <td>Chris</td>
+                <td>Proba</td>
+                <td>HDF4</td>
+                <td>ESA Third Party Mission catalogue: <a href="https://tpm-ds.eo.esa.int/smcat/PROBA1-CHRIS/" target="_blank"><u>https://tpm-ds.eo.esa.int/smcat/PROBA1-CHRIS/</u></a><br>
+                 HTTP: <a href="https://earth.esa.int/web/guest/data-access/browse-data-products?p_r_p_564233524_assetIdentifier=proba-chris-level-1a-1488" target="_blank"><u>https://earth.esa.int/web/guest/data-access/browse-data-products?p_r_p_564233524_assetIdentifier=proba-chris-level-1a-1488</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>6</td>
+                <td>MIRAS (SMOS)</td>
+                <td>SMOS</td>
+                <td>Earth Explorer</td>
+                <td>ESA SMOS dissemination service <a href="https://smos-diss.eo.esa.int" target="_blank"><u>https://smos-diss.eo.esa.int</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>7</td>
+                <td>AVNIR-2</td>
+                <td>ALOS</td>
+                <td>CEOS</td>
+                <td>ESA User Services Portal: <a href="https://esatellus.service-now.com/csp?id=dar&amp;dataset=ALOS.AVNIR-2.L1C" target="_blank"><u>https://esatellus.service-now.com/csp?id=dar&amp;dataset=ALOS.AVNIR-2.L1C</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>8</td>
+                <td>PRISM</td>
+                <td>ALOS</td>
+                <td>CEOS</td>
+                <td>ESA User Services Portal: <a href="https://esatellus.service-now.com/csp?id=dar&amp;dataset=ALOS_PRISM_L1B" target="_blank"><u>https://esatellus.service-now.com/csp?id=dar&amp;dataset=ALOS_PRISM_L1B</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>9</td>
+                <td>MODIS</td>
+                <td>Aqua, Terra</td>
+                <td>HDF</td>
+                <td>Ocean data: <a href="http://oceancolor.gsfc.nasa.gov/cgi/browse.pl?sen=am" target="_blank"><u>http://oceancolor.gsfc.nasa.gov/cgi/browse.pl?sen=am</u></a><br>
+                 Land data: <a href="https://lpdaac.usgs.gov/" target="_blank"><u>https://lpdaac.usgs.gov/</u></a><br>
+                </td>
+                </tr>
+                <tr valign="top">
+                <td>10</td>
+                <td>AVHRR/3</td>
+                <td>NOAA-KLM</td>
+                <td>NOAA METOP</td>
+                <td>NOAA: <a href="https://www.avl.class.noaa.gov/saa/products/welcome" target="_blank"><u>https://www.avl.class.noaa.gov/saa/products/welcome</u></a><br>
+                 METOP: <a href="https://eoportal.eumetsat.int/userMgmt/protected/dataCentre.faces?acronym=AVHEAR00" target="_blank"><u>https://eoportal.eumetsat.int/userMgmt/protected/dataCentre.faces?acronym=AVHEAR00</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>11</td>
+                <td>TM Thematic Mapper</td>
+                <td>Landsat 4/5</td>
+                <td>Fast Format</td>
+                <td>ESA Landsat Dissemination Service: <a href="https://landsat-diss.eo.esa.int/socat/LandsatTM" target="_blank"><u>https://landsat-diss.eo.esa.int/socat/LandsatTM</u></a><br>
+                <br>
+                </td>
+                </tr>
+                <tr valign="top">
+                <td>12</td>
+                <td>TM, ETM+, OLI, TIRS</td>
+                <td>Landsat 4, 5, 7, 8</td>
+                <td>GeoTIFF Format</td>
+                <td>USGS EROS (Earth Resources Observation and Science Center): <a href="http://eros.usgs.gov/" target="_blank"><u>http://eros.usgs.gov/</u></a><br>
+                 USGS Earth Explorer: <a href="http://earthexplorer.usgs.gov/" target="_blank"><u>http://earthexplorer.usgs.gov/</u></a><br>
+                 USGS GloVis: <a href="http://glovis.usgs.gov/" target="_blank"><u>http://glovis.usgs.gov/</u></a><br>
+                </td>
+                </tr>
+                <tr valign="top">
+                <td>13</td>
+                <td>SPOT VEGETATION</td>
+                <td>SPOT</td>
+                <td>HDF</td>
+                <td>The SPOT VEGETATION homepage: <a href="http://www.spot-vegetation.com/" target="_blank"><u>http://www.spot-vegetation.com/</u></a><br>
+                </td>
+                </tr>
+                <tr valign="top">
+                <td>14</td>
+                <td>Aquarius</td>
+                <td>SPOT</td>
+                <td>HDF</td>
+                <td>FTP: <a href="ftp://podaac-ftp.jpl.nasa.gov/allData/aquarius/">ftp://podaac-ftp.jpl.nasa.gov/allData/aquarius/</a><br>
+                 OPeNDAP: <a href="https://podaac.jpl.nasa.gov/dataset/AQUARIUS_L2_SSS_V5" target="_blank"><u>https://podaac.jpl.nasa.gov/dataset/AQUARIUS_L2_SSS_V5</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>15</td>
+                <td>VIIRS</td>
+                <td>Suomi NPP</td>
+                <td>HDF</td>
+                <td>NASA: <a href="https://www.earthdata.nasa.gov/learn/find-data/near-real-time/viirs" target="_blank"><u>https://www.earthdata.nasa.gov/learn/find-data/near-real-time/viirs</u></a><br>
+                 NOAA: <a href="https://ncc.nesdis.noaa.gov/VIIRS/" target="_blank"><u>https://ncc.nesdis.noaa.gov/VIIRS/</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>16</td>
+                <td>GlobAerosol</td>
+                <td>n/a</td>
+                <td>NetCDF</td>
+                <td>FTP: <a href="ftp://ftp.globaerosol.info/">ftp://ftp.globaerosol.info/</a></td>
+                </tr>
+                <tr valign="top">
+                <td>17</td>
+                <td>GlobColour</td>
+                <td>multiple</td>
+                <td>NetCDF</td>
+                <td><a href="https://hermes.acri.fr/index.php?class=archive" target="_blank"><u>https://hermes.acri.fr/index.php?class=archive</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>18</td>
+                <td>Medspiration</td>
+                <td>n/a</td>
+                <td>NetCDF</td>
+                <td><a href="https://cersat.ifremer.fr/Projects/Previous-projects/Medspiration/Products-and-Services" target="_blank"><u>https://cersat.ifremer.fr/Projects/Previous-projects/Medspiration/Products-and-Services</u></a></td>
+                </tr>
+                <tr valign="top">
+                <td>19</td>
+                <td>GETASSE DEM</td>
+                <td>n/a</td>
+                <td>Generic</td>
+                <td><a href="https://earth.esa.int/eogateway/tools/amorgos" target="_blank"><u>https://earth.esa.int/eogateway/tools/amorgos</u></a></td>
+                </tr>
+                </tbody>
+              </table>
+              <p>In the first lesson we will use Landsat 8 data from USGS <a href="https://earthexplorer.usgs.gov/">EarthExplorer website</a>.</p>
+              <div>
+                <img src="images/Ref01/EarthExplorer.png" alt="" />
+                <p class="caption">Earth Explorer: the main page</p>
+              </div>
+              <p>First of all you need to Create an Account or Login. At the top right corner of the website, click on Register to create a new account, or Login if you are an existing user. As a new user, once you click on Register, you will be required to type in your preferred username and password. Following these requirements, fill in your preferred username and password and click Continue.</p>
+              <p>After successfully registering, you will be required to fill in some information to better understand how the data you are downloading is being utilized. Read each of the questions and choose the appropriate answers for you. Submit your registration after filling in all the required details successfully. You will be required to confirm and activate your account by clicking the link in the email. Click on Return to Login Page when you have activated your account to sign in.</p>
+              <p>Now that you are logged in, you are ready to search for and download Landsat Imagery. In the Search Criteria Tab, you need to specify your Area of Interest (AOI), and you can do this in multiple ways:
+                <ul>
+                  <li><b>Geocoder</b>: This allows you to select a geocoding method. You can either use Feature (GNIS), Address/Place, or Path/Row to choose your AOI</li>
+                  <li><b>KML/Shapefile Upload</b>: You can upload a KML/shapefile of your AOI if you already have one</li>
+                  <li><b>Map Interface</b>: You can zoom in to your AOI on the map interface and draw a shape to select your AOI</li>
+                  <li><b>Coordinates</b>: You can also manually enter the coordinates of your area of interest if you have the coordinates</li>
+                </ul>
+              </p>
+              <p>After defining your AOI, you can choose a date range, a cloud cover range, and your preferred result options to streamline your search.</p>
+              <p>It is now time to select the data you want to download. You can use the Data Sets Search tab to search for it or you scroll down and navigate to the data category. In this case, we are downloading Landsat 8 Imagery. You will observe that there are two levels (Level 1 and Level 2) in Collection 2. Level 2 is mostly used because it is atmospherically corrected (Surface Reflectance) data. Check  Landsat 8 C2/L2 data.</p>
+              <div>
+                <img src="images/Ref01/DataSetsSearch.png" alt="" />
+                <p class="caption">Data Sets Searching</p>
+              </div>
+              <p>Now that we have selected the dataset and defined our date and cloud cover range, click the "Results" button. This will update your search results to return results that match your query. When results are returned, it is important to check for some details before you proceed to download. You want to make sure the results returned actually cover your area of interest. You can confirm this by checking the footprint of the imagery. In the image below, checking the footprint shows that this particular imagery result does not cover my AOI. The red color is my AOI while the green color is the footprint of the first imagery. Do this until you find one that actually covers it.</p>
+              <div>
+                <img src="images/Ref01/Footprints.png" alt="" />
+                <p class="caption">Satellite Images Interactive Searching</p>
+              </div>
+              <p>Once you find one that matches your preference, you also need to check the metadata to see the “data” about your data. Here, you will see the imagery date, the time of acquisition, the cloud cover, and other information.</p>
+              <div>
+                <img src="images/Ref01/ImageParameters.png" alt="" />
+                <p class="caption">Image Parameters</p>
+              </div>
+              <p>When everything looks good, you can then proceed to download.</p>
+              <div>
+                <img src="images/Ref01/ImageDownloading.png" alt="" />
+                <p class="caption">Image Downloading</p>
+              </div>
+            </div>
+            <div id="data-import" class="section level2">
+              <h2><span class="header-section-number">1.4</span> Data Import</h2>
+              <p><a href="snap-introduction.html#introduction">Back to the beginning ⇡</a></p>
+              <p>Once you have installed SNAP, you can import the data you downloaded. There are two main ways of loading data into SNAP. To import the product, you can go to File > Open Product then navigate to the product file and open it.</p>
+              <p>The second way is to go to the <i>File > Import</i>. Depending on your choice a window will be opened which pre defines the file type which is required to load a certain data format (for example .xml, .hdr, .safe, or .zip). Loading data via <i>File > Import</i> is recommended, because it grants that the correct file is selected during the import so that all metadata of the input are interpreted correctly by SNAP.</p>
+              <div>
+                <img src="images/Ref01/ImportingOrder.png" alt="" />
+                <p class="caption">Import Data into SNAP</p>
+              </div>
+              <p>When the product has loaded, it will appear in the table of contents (TOC) on the left-hand side of the interface. You can expand the product using the “+” icon to the left of the product name. You will find the individual band data in the folder labeled ‘Bands’. Double click on the band name to view it in the workspace viewer window.</p>
+              <div>
+                <img src="images/Ref01/ImageList.png" alt="" />
+                <p class="caption">List of available images from source</p>
+              </div>
+            </div>
+            <div id="raster-cropping" class="section level2">
+              <h2><span class="header-section-number">1.5</span> Raster Cropping</h2>
+              <p><a href="snap-introduction.html#introduction">Back to the beginning ⇡</a></p>
+              <p>You may need to subset your data, as is unlikely that you will require the whole Sentinel 2 scene. The Subset tool can be used to clip the image to your specific area of interest (AOI). It may be best to subset your image before you carry out any analysis tasks, as a smaller image will take less computing power to process. To subset your data, click the product name in the TOC to highlight it, then click Raster on the toolbar and select Subset from the dropdown menu.</p>
+              <div>
+                <img src="images/Ref01/Subset.png" alt="" />
+                <p class="caption">Subset Tool Location in SNAP Interface</p>
+              </div>
+              <p>In the Product Subset window view, further adjust your subset by using your mouse to move the sides on the blue rectangle outline. You can fine-tune your subset by entering values in the four boxes under the Pixel Coordinates and Geo Coordinates tabs. Manually selecting geo-coordinates is helpful if you wish to create identical subsets of multiple products.</p>
+              <div>
+                <img src="images/Ref01/SubsetMenu.png" alt="" />
+                <p class="caption">Subset Tool Menu</p>
+              </div>
+              <p>Or you can try another way - using your mouse-wheel to zoom and left-click to drag (to do this, you must select the panning tool), center your view on the area you wish to study. Right-click in the view area and select Spatial Subset from View.</p>
+              <div>
+                <img src="images/Ref01/SubsetFromView.png" alt="" />
+                <p class="caption">Subset From View Tool Location</p>
+              </div>
+              <p>When you have defined the AOI, click on the "Band Subset" tab. Here, you can select the bands that you want to include in the subset image.</p>
+              <div>
+                <img src="images/Ref01/SubsetBands.png" alt="" height="500px"/>
+                <p class="caption">Bands choosing from Subsetting Image</p>
+              </div>
+              <p>After clicking OK, the subset product will be added to the Table of Contents with the prefix subset_. Double-click on this subset product to expand, then expand the Bands folder and double-click on the one of bands to view the image.</p>
+            </div>
+            <div id="data-visualization" class="section level2">
+              <h2><span class="header-section-number">1.6</span> Data visualization</h2>
+              <p><a href="snap-introduction.html#introduction">Back to the beginning ⇡</a></p>
+              <p>Now that the data has been imported and subsetted, you can carry out processing and analysis tasks on the data. Firstly, to create an RGB (Red, Green, Blue) image, also known as a True Color Image, right click on the product name in the TOC and select Open RGB Image Window from the drop-down menu.</p>
+              <div>
+                <img src="images/Ref01/ImageContextMenu.png" alt="" height="500px"/>
+                <p class="caption">RGB Viewer Button</p>
+              </div>
+              <p>A window will open, allowing you to select the spectral bands that you would like to assign to each color (red, green, blue). If you choose Sentinel 2 MSI Natural Colors as the profile, the bands will be automatically assigned, with red corresponding to band 4, green corresponding to band 3, and blue corresponding to band 2. Alternatively, you can manually assign the bands if desired. Once you are satisfied with the assignment, click "OK". Finally, the RGB image will be loaded into the viewing window.</p>
+              <div>
+                <img src="images/Ref01/RGBChannels.png" alt="" height="300px"/>
+                <p class="caption">RGB Channels chooser </p>
+              </div>
+              <p>To create a stacking image file you need to use a Collocation tool. The Collocation Tool can be invoked from the tool menu in the Sentinel Toolbox by selecting Processing > Geometric Operations > Collocation. In the Source Products group you need to specify the reference product. The combo box presents a list of all products opened in SNAP. You may select one of these or, by clicking on the button next to the combo box, choose a product from the file system. </p>
+              <p>Then in Target Product Group Name you should specify the name of the target product. “Save as”  checkbox is used to specify whether the target product should be saved to the file system. The combo box presents a list of file formats. “Open in SNAP” checkbox is used to specify whether the target product should be opened in SNAP after processing. When the target product is not saved, it is opened in SNAP automatically.</p>
+              <p>Each product consists of different components, such as bands, flag codings and bitmask definitions. In order to avoid naming conflicts between reference and secondary product components, the user can specify a renaming pattern. By checking or unchecking option "Rename reference components" the automatic renaming of reference product components can be activated or deactivated, respectively. If activated, all components of the reference product are renamed according to the pattern given in the text field next to the check box. When all information is complete, click "Run".</p>
+              <div>
+                <img src="images/Ref01/Collocation.png" alt="" height="500px" />
+                <p class="caption">Collocation Tool Window</p>
+              </div>
+            </div>
+            <div id="data-export" class="section level2">
+              <h2><span class="header-section-number">1.7</span> Data Export</h2>
+              <p><a href="snap-introduction.html#introduction">Back to the beginning ⇡</a></p>
+              <p>Data export can be done via the menu: <i>File > Export</i>. Using this submenu the product can be exported in the listed formats.</p>
+              <div>
+                <img src="images/Ref01/FileExport.png" alt="" height="500px"/>
+                <p class="caption">File Formats for Export</p>
+              </div>
+              <p>Select one of the formats and then select a location to save. Change the file name if necessary and press the button “Export” product. Wait for the new product written on disk.</p>
+            </div>
+            
+<table>
+<tbody>
+<tr class="odd">
+<td><em>Карпачевский А.М.</em> <strong>Картография: практикум в QGIS</strong>. М.: Географический факультет МГУ, 2020.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="map-math.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["cartography-course.pdf", "cartography-course.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
