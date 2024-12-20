@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Calculation of Optical Images Data: SNAP Course</title>
+    <meta name="description" content="SNAP course for specialists" />
+    <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+    <meta property="og:title" content="SNAP course for specialists" />
+    <meta property="og:type" content="book" />
+    <meta property="og:description" content="SNAP course for specialists" />
+    <meta name="github-repo" content="klavomen/snap-course" /> 
+  <meta name="author" content="M. Shiryaev, E. Epiphanova, D. Nikolayev, D. Kornilov on base of A. Karpachevskiy's site" />
+  <meta name="date" content="2020-12-07" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="next" href="map-topo.html"/>
+  <script src="libs/jquery-2.2.3/jquery.min.js"></script>
+  <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+  <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+  <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+<body>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+    <div class="book-summary">
+      <nav role="navigation">
+        <ul class="summary">
+          <li><a href="./">SNAP Course</a></li>
+          <li class="divider"></li>
+          <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Software for course completion</a>
+            <ul>
+              <li class="chapter" data-level="" data-path="index.html"><a href="index.html#snap"><i class="fa fa-check"></i>SNAP</a></li>
+            </ul>
+          </li>
+          <li class="chapter" data-level="1" data-path="snap-introduction.html"><a href="snap-introduction.html"><i class="fa fa-check"></i><b>1</b> Basic abilities and data sources</a>
+            <ul>
+              <li class="chapter" data-level="1.1" data-path="snap-introduction.html"><a href="snap-introduction.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+              <li class="chapter" data-level="1.2" data-path="snap-introduction.html"><a href="snap-introduction.html#interface"><i class="fa fa-check"></i><b>1.2</b> SNAP Interface</a></li>
+              <li class="chapter" data-level="1.3" data-path="snap-introduction.html"><a href="snap-introduction.html#data-sources"><i class="fa fa-check"></i><b>1.3</b> Data Sources and Downloading Images</a></li>
+              <li class="chapter" data-level="1.4" data-path="snap-introduction.html"><a href="snap-introduction.html#data-import"><i class="fa fa-check"></i><b>1.4</b> Data import</a></li>
+              <li class="chapter" data-level="1.5" data-path="snap-introduction.html"><a href="snap-introduction.html#raster-cropping"><i class="fa fa-check"></i><b>1.5</b> Raster cropping</a></li>
+              <li class="chapter" data-level="1.6" data-path="snap-introduction.html"><a href="snap-introduction.html#data-visualization"><i class="fa fa-check"></i><b>1.6</b> Data visualization</a></li>
+              <li class="chapter" data-level="1.7" data-path="snap-introduction.html"><a href="snap-introduction.html#data-export"><i class="fa fa-check"></i><b>1.7</b> Images Export</a></li>
+            </ul>
+          </li>
+          <li class="chapter" data-level="2" data-path="basic-calc.html"><a href="basic-calc.html"><i class="fa fa-check"></i><b>2</b> Calculation of Optical Images Data</a>
+            <ul>
+              <li class="chapter" data-level="2.1" data-path="basic-calc.html"><a href="basic-calc.html#masking"><i class="fa fa-check"></i><b>2.1</b> Sea and land masking</a></li>
+              <li class="chapter" data-level="2.2" data-path="basic-calc.html"><a href="basic-calc.html#tools-calc"><i class="fa fa-check"></i><b>2.2</b> Raster Calculations by SNAP Tools</a></li>
+              <li class="chapter" data-level="2.3" data-path="basic-calc.html"><a href="basic-calc.html#raster-calc"><i class="fa fa-check"></i><b>2.3</b> Raster Calculator</a></li>
+              <li class="chapter" data-level="2.4" data-path="basic-calc.html"><a href="basic-calc.html#analysis-tool"><i class="fa fa-check"></i><b>2.4</b> Analysis Tools</a></li>
+              <li class="chapter" data-level="2.5" data-path="basic-calc.html"><a href="basic-calc.html#thematic-proc"><i class="fa fa-check"></i><b>2.5</b> Thematic Processors</a></li>
+            </ul>
+          </li>
+          <li class="chapter" data-level="3" data-path="multitemporal.html"><a href="multitemporal.html"><i class="fa fa-check"></i><b>3</b> Multitemporal Synthesis and Image clustering</a>
+            <!-- <ul>
+              <li class="chapter" data-level="2.1" data-path="basic-calc.html"><a href="basic-calc.html#masking"><i class="fa fa-check"></i><b>2.1</b> Sea and land masking</a></li>
+              <li class="chapter" data-level="2.2" data-path="basic-calc.html"><a href="basic-calc.html#tools-calc"><i class="fa fa-check"></i><b>2.2</b> Raster Calculations by SNAP Tools</a></li>
+              <li class="chapter" data-level="2.3" data-path="basic-calc.html"><a href="basic-calc.html#raster-calc"><i class="fa fa-check"></i><b>2.3</b> Raster Calculator</a></li>
+              <li class="chapter" data-level="2.4" data-path="basic-calc.html"><a href="basic-calc.html#analysis-tool"><i class="fa fa-check"></i><b>2.4</b> Analysis Tools</a></li>
+              <li class="chapter" data-level="2.5" data-path="basic-calc.html"><a href="basic-calc.html#thematic-proc"><i class="fa fa-check"></i><b>2.5</b> Thematic Processors</a></li>
+            </ul> -->
+          </li>
+          <li class="chapter" data-level="4" data-path="sup-class.html"><a href="sup-class.html"><i class="fa fa-check"></i><b>4</b> Supervised Classification</a>
+            <ul>
+              <li class="chapter" data-level="4.1" data-path="sup-class.html"><a href="sup-class.html#explan"><i class="fa fa-check"></i><b>4.1</b> Data selection </a></li>
+              <li class="chapter" data-level="4.2" data-path="sup-class.html"><a href="sup-class.html#poly-creat"><i class="fa fa-check"></i><b>4.2</b> Polygons creating and editing</a></li>
+              <li class="chapter" data-level="4.3" data-path="sup-class.html"><a href="sup-class.html#vector-import"><i class="fa fa-check"></i><b>4.3</b> Import and export of vector data</a></li>
+              <li class="chapter" data-level="4.4" data-path="sup-class.html"><a href="sup-class.html#classification"><i class="fa fa-check"></i><b>4.4</b> Classification of imagery</a></li>
+              <li class="chapter" data-level="4.5" data-path="sup-class.html"><a href="sup-class.html#accuracy"><i class="fa fa-check"></i><b>4.5</b> Accuracy estimation</a></li>
+            </ul>
+          </li>
+          <li class="chapter" data-level="5" data-path="radar.html"><a href="radar.html"><i class="fa fa-check"></i><b>5</b> SAR Processing</a>
+            <ul>
+                <li class="chapter" data-level="5.1" data-path="radar.html"><a href="radar.html#sources"><i class="fa fa-check"></i><b>5.1</b> Sources of radar data</a></li>
+                <li class="chapter" data-level="5.2" data-path="radar.html"><a href="radar.html#pre-process"><i class="fa fa-check"></i><b>5.2</b> SAR Image pre-processing</a></li>
+                <li class="chapter" data-level="5.3" data-path="radar.html"><a href="radar.html#graph-and-batch"><i class="fa fa-check"></i><b>5.3</b> Graph and Batch processing in SNAP Desktop</a></li>
+                <li class="chapter" data-level="5.4" data-path="radar.html"><a href="radar.html#segmentation"><i class="fa fa-check"></i><b>5.4</b> Segmentation of flooded areas</a></li>
+                <li class="chapter" data-level="5.5" data-path="radar.html"><a href="radar.html#image-geocoding"><i class="fa fa-check"></i><b>5.5</b> Geocoding of SAR images</a></li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SNAP course for specialists</a>
+          </h1>
+        </div>
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+            <section class="normal" id="section-">
+            <div id="basic-calc" class="section level1">
+                <h1><span class="header-section-number">Class 4</span> Working with vector objects and Image classification in SNAP Desktop</h1>
+                <p>Supervised learning is one of the most common directions in machine learning. Space image classification is also one of the most common applications of satellite imagery. SNAP Desktop software is capable of performing image classification as well as training sample creation. The aim of this lesson is to familiarize with image classification in SNAP and all its stages: vector training samples creation, quality control by using scatter plot, supervised learning and accuracy assessment by using pins.</p>
+
+
+                <div id="explan" class="section level2">
+                    <h2><span class="header-section-number">4.1.</span> Data Selection</h2>
+                    <p><a href="sup-class.html#basic-calc">Back to the beginning ⇡</a></p>
+                    <p>The work will require a summer image, which should include visible, NIR and SWIR band channels. The territory should include areas such as urban areas, meadows, forests, water bodies and other surfaces that are confidently detectable. Examples will be illustrated on the Samara image</p>
+                    <div>
+                        <img src="images/Ref04/DataSelection.png" alt="" />
+                        <p class="caption">Samara on the Optical Image</p>
+                    </div>
+                </div>
+                <div id="poly-creat" class="section level2">
+                    <h2><span class="header-section-number">4.2.</span> Polygons Creation and Edit</h2>
+                    <p><a href="sup-class.html#basic-calc">Back to the beginning ⇡</a></p>
+                    <p>Image classification (supervised classification) classifying an image into classes based on predefined vector samples. The task will consider options for creating vector objects in SNAP.</p>
+                    <p>Vector objects are saved together with raster data in SNAP internal format (BEAM-DIMAP). Therefore, when creating or importing vector objects that you will need to work with later, you should export the image to the BEAM-DIMAP format. Do it <i>File -> Export -> BEAM-DIMAP</i>.</p>
+                    <p>All saved vector layers in the file can be seen in the Vector Data section. They are called Vector Data Container. There are also two default two containers are created in the file: “pins” and “ground_control_points”</p>
+                    <div>
+                        <img src="images/Ref04/VectorPinsGCP.png" alt="" />
+                        <p class="caption">Vector Containers in SNAP Project Structure</p>
+                    </div>
+                    <p>	Display the multichannel image in the view window. After that you can start creating vector objects. To create a new Vector Data Container, find the Vector Data Container tool in the Vector menu</p>
+                    <div>
+                        <img src="images/Ref04/NewVec.png" alt="" />
+                        <!-- <p class="caption">Vector Containers in SNAP Project Structure</p> -->
+                    </div>
+                    <p>In the window that appears, name the new vector layer by the name of the class whose polygons it will contain (e.g., forest). Click OK.</p>
+                    <p>After this operation a new empty Vector Data Container will appear in the Vector Data section, where you can add vector objects. Vector container can contain spatial objects of different classes (lines and polygons at the same time). Point objects are optionally saved in Pins Container</p>
+                    <p>The tools for creating vector objects are located in the Tools menu.</p>
+                    <div>
+                        <img src="images/Ref04/VecTools.png" alt="" />
+                        <p class="caption">Vector Toolbar</p>
+                    </div>
+                    <p>If the corresponding menu is missing, activate it in the Tool Manager (right click on the Toolbar)</p>
+                    <p>Before creating vector objects, make sure that the corresponding layers are visible. On Toolbar in the Overlay menu Show/hide geometry overlay should be active <img src="images/Ref04/VecVisib.png" alt="" height="24pt"></p>
+                    <p>The following classes of objects are available for creation:
+                        <ul>
+                            <li>point (Pins)</li>
+                            <li>Ground Control Points (GCP)</li>
+                            <li>linear objects (Line, Polyline)</li>
+                            <li>polygons (Rectangle, Ellipse, Polygon).</li>
+                        </ul>
+                    </p> 
+                    <p>Select the Rectangle Drawing Tool to create a rectangle, then click where the corner of the rectangle will be located and drag the cursor sideways so that the area encompasses the forest. Press the left click to complete the creation of the rectangle. The created objects in the same container will be colored with the same color. An ellipse is created in the same way.</p>
+                    <p>To create a free-form polygon, select the Polygon Drawing Tool, then press the left click to successively add nodes to your polygon. To finish adding new nodes, left click twice.</p>
+                    <p>Select the Selection tool from the same Tools menu to edit the created polygon and click on the desired polygon to select it. Hold down the left mouse button on the polygon to move the object. Quickly click on it again to activate node editing. Click it a third time to activate the ability to scale the object. With the Shift button scale the object proportionally along two axes.</p>
+                    <p>Create the rest of the Vector Data Container in the same way and fill it with polygonal references. To switch between layers, select an object from the desired layer with the Selection tool, then continue creating new polygons.</p>
+                    <div>
+                        <img src="images/Ref04/VecLayers.png" alt="" />
+                        <p class="caption">Vector Objects in Layers</p>
+                    </div>
+                    <p>You can check the contents of a containerы by double-clicking on the desired container, after which the viewer will display an attribute table that also contains a geometry field with WKT records.</p>
+                    <div>
+                        <img src="images/Ref04/VecGeom.png" alt="" />
+                        <!-- <p class="caption">Vector Containers in SNAP Project Structure</p> -->
+                    </div>
+                    <p>The quality of classification depends on the samples - they should be as different from another as possible. The values of pixels of different classes should not overlap. You can display the values on a scatter plot to control the quality of samples. This plot can be displayed through the search window by typing the tool name (“Scatter plot”). Activate the Use ROI Mask option and select the desired container. Select the channels whose values you want to visualize in the scatter plot. Click Refresh View to display the plot or refresh it.</p>
+                </div>
+                <div id="vector-import" class="section level2">
+                    <h2><span class="header-section-number">4.3.</span> Import and Export of Vector Data</h2>
+                    <p><a href="sup-class.html#basic-calc">Back to the beginning ⇡</a></p>
+                    <p>The import of vector data is performed using the “Vector - Import” menu item in the following ways:</p>
+                    <ol>
+                        <li>From shape-file</li>
+                        <li>From csv-file (the file should contain a field with geometry in WKT format)</li>
+                    </ol>
+                    <p>When importing objects from a file, you are offered to split objects in the file into separate containers. If you do not want to do this, you should select NO. Also, you can add new objects to an already created container using a WKT record via the Geometry from WKT tool. If you want to export a Vector Data Container to shape-file, you should select the necessary container and use the corresponding tool (Vector - Export - Geomatry as Shape-file). Besides, if you click on an object you can get its geometry in WKT format by selecting the corresponding item.</p>
+                </div>
+                <div id="classification" class="section level2">
+                    <h2><span class="header-section-number">4.4.</span> Classification of imagery</h2>
+                    <p><a href="sup-class.html#basic-calc">Back to the beginning ⇡</a></p>
+                    <p>The supervised classification section is located under Supervised Classification (Raster - Classification - Supervised Classification) The following supervised classification algorithms are implemented in SNAP:</p>
+                    <ul>
+                        <li>KNN</li>
+                        <li>KDTree KNN</li>
+                        <li>Minimum distance</li>
+                        <li>Maximum Likehood</li>
+                        <li>Random Forest</li>
+                        <li>Spectral Angle</li>
+                    </ul>
+                    <p>The work of these algorithms can be found in SNAP help, as well as in academic and scientific literature. In this lesson we will perform classification using Minimum distance and Maximum Likehood methods. The interface of the tool windows has a similar appearance:
+                        <ul>
+                            <li>In the Product Set-Reader section add a file with the image to be submitted for classification and created vector standards</li>
+                            <li>In the Set Parameters section (by the name of the selected algorithm) select the data type for the standards (by default - vector), the classes for which classification will be performed (according to the created Vector Data Container), as well as the channels, by the values from which classification will be performed</li>
+                            <li>In the save section, the directory and file name are required</li>
+                        </ul>
+                    </p>
+                    <p>Try the classification with this algorithm by selecting different combinations of channels (e.g., R-G-B, NIR-R-G, or SWIR-NIR-R) and compare the results. You can see class descriptions and their fractions in the Color Manipulation menu.</p>
+                    <div>
+                        <img src="images/Ref04/ColorManipul.png" alt="" />
+                        <p class="caption">Color Manipulation Window</p>
+                    </div>
+                </div>
+                <div id="accuracy" class="section level2">
+                    <h2><span class="header-section-number">4.5.</span> Accuracy estimation</h2>
+                    <p><a href="sup-class.html#basic-calc">Back to the beginning ⇡</a></p>
+                    <p>A simple evaluation of the obtained classification results can be done by comparing the true classes at pre-selected points with the obtained ones.</p>
+                    <p>In SNAP, counting can be done as follows:
+                        <ol>
+                            <li>Add Pin-objects by selecting the appropriate tool in the Tools menu and add single class marks to the optical image. If Pin objects are not displayed, enable and display in the Overlay menu. Pin objects are always added in the pins layer. Dots can be placed on disputed locations and on the boundary of areas of the corresponding class. The more dots, the better</li>
+                            <li>In the Pin Manager menu (can be opened via search), transfer the points to the classified layer using the Transfer the selected pins to other products option and select the desired product.</li>
+                            <li>Display the classified raster in the window, right-click on and select the Export Mask Pixels option. The points with the values of the classified raster will be exported in TXT format</li>
+                            <li>Calculate the percentage of points correctly assigned to the required class</li>
+                        </ol>
+                    </p>
+                    <div>
+                        <img src="images/Ref04/PinSelection.png" alt="" />
+                        <p class="caption">Selected Pins for Accuracy Estimation</p>
+                    </div>
+                </div>
+                <div class="section level2">
+                    <h3>Tasks & Questions</h3>
+                    <p>Questions:
+                      <ul>
+                        <li>What vector objects can be created in Vector Data Container</li>
+                        <li>How can you control the quality of the created standards using SNAP Desktop?</li>
+                        <li>What classification algorithms with training are implemented in SNAP?</li>
+                        <li>How you can quickly evaluate the quality of classification in SNAP</li>
+                      </ul>
+                    </p>
+                </div>            
+                <table>
+                    <tbody>
+                    <tr class="odd">
+                    <td><em>Shiryaev M. et. al</em> <strong>SNAP Course for Specialists</strong>. 
+                        Moscow: Department of Geography, MSU, 2024.</td>
+                    </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <a href="snap-introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+    <a href="map-math.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+  </div>
+</div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["cartography-course.pdf", "cartography-course.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
