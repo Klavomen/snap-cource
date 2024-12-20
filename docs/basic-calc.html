@@ -58,6 +58,35 @@
               <li class="chapter" data-level="2.1" data-path="basic-calc.html"><a href="basic-calc.html#masking"><i class="fa fa-check"></i><b>2.1</b> Sea and land masking</a></li>
               <li class="chapter" data-level="2.2" data-path="basic-calc.html"><a href="basic-calc.html#tools-calc"><i class="fa fa-check"></i><b>2.2</b> Raster Calculations by SNAP Tools</a></li>
               <li class="chapter" data-level="2.3" data-path="basic-calc.html"><a href="basic-calc.html#raster-calc"><i class="fa fa-check"></i><b>2.3</b> Raster Calculator</a></li>
+              <li class="chapter" data-level="2.4" data-path="basic-calc.html"><a href="basic-calc.html#analysis-tool"><i class="fa fa-check"></i><b>2.4</b> Analysis Tools</a></li>
+              <li class="chapter" data-level="2.5" data-path="basic-calc.html"><a href="basic-calc.html#thematic-proc"><i class="fa fa-check"></i><b>2.5</b> Thematic Processors</a></li>
+            </ul>
+          </li>
+          <li class="chapter" data-level="3" data-path="multitemporal.html"><a href="multitemporal.html"><i class="fa fa-check"></i><b>3</b> Multitemporal Synthesis and Image clustering</a>
+            <!-- <ul>
+              <li class="chapter" data-level="2.1" data-path="basic-calc.html"><a href="basic-calc.html#masking"><i class="fa fa-check"></i><b>2.1</b> Sea and land masking</a></li>
+              <li class="chapter" data-level="2.2" data-path="basic-calc.html"><a href="basic-calc.html#tools-calc"><i class="fa fa-check"></i><b>2.2</b> Raster Calculations by SNAP Tools</a></li>
+              <li class="chapter" data-level="2.3" data-path="basic-calc.html"><a href="basic-calc.html#raster-calc"><i class="fa fa-check"></i><b>2.3</b> Raster Calculator</a></li>
+              <li class="chapter" data-level="2.4" data-path="basic-calc.html"><a href="basic-calc.html#analysis-tool"><i class="fa fa-check"></i><b>2.4</b> Analysis Tools</a></li>
+              <li class="chapter" data-level="2.5" data-path="basic-calc.html"><a href="basic-calc.html#thematic-proc"><i class="fa fa-check"></i><b>2.5</b> Thematic Processors</a></li>
+            </ul> -->
+          </li>
+          <li class="chapter" data-level="4" data-path="sup-class.html"><a href="sup-class.html"><i class="fa fa-check"></i><b>4</b> Supervised Classification</a>
+            <ul>
+              <li class="chapter" data-level="4.1" data-path="sup-class.html"><a href="sup-class.html#explan"><i class="fa fa-check"></i><b>4.1</b> Choosing of </a></li>
+              <li class="chapter" data-level="4.2" data-path="sup-class.html"><a href="sup-class.html#tools-calc"><i class="fa fa-check"></i><b>4.2</b> Polygons creating and editing</a></li>
+              <li class="chapter" data-level="4.3" data-path="sup-class.html"><a href="sup-class.html#raster-calc"><i class="fa fa-check"></i><b>4.3</b> Import and export of vector data</a></li>
+              <li class="chapter" data-level="4.4" data-path="sup-class.html"><a href="sup-class.html#analysis-tool"><i class="fa fa-check"></i><b>4.4</b> Classification of imagery</a></li>
+              <li class="chapter" data-level="4.5" data-path="sup-class.html"><a href="sup-class.html#thematic-proc"><i class="fa fa-check"></i><b>4.5</b> Accuracy estimation</a></li>
+            </ul>
+          </li>
+          <li class="chapter" data-level="5" data-path="radar.html"><a href="radar.html"><i class="fa fa-check"></i><b>5</b> Radar</a>
+            <ul>
+              <li class="chapter" data-level="5.1" data-path="radar.html"><a href="radar.html#masking"><i class="fa fa-check"></i><b>5.1</b> Sources of radar data</a></li>
+              <li class="chapter" data-level="5.2" data-path="radar.html"><a href="radar.html#tools-calc"><i class="fa fa-check"></i><b>5.2</b> SAR Image pre-processing</a></li>
+              <li class="chapter" data-level="5.3" data-path="radar.html"><a href="radar.html#raster-calc"><i class="fa fa-check"></i><b>5.3</b> Graph and Batch processing in SNAP Desktop</a></li>
+              <li class="chapter" data-level="5.4" data-path="radar.html"><a href="radar.html#analysis-tool"><i class="fa fa-check"></i><b>5.4</b> Segmentation of flooded areas</a></li>
+              <li class="chapter" data-level="5.5" data-path="radar.html"><a href="radar.html#thematic-proc"><i class="fa fa-check"></i><b>5.5</b> Geocoding of SAR images</a></li>
             </ul>
           </li>
           <li class="divider"></li>
@@ -86,51 +115,158 @@
                 </ol>
               </p>
               <p>This lesson focuses on basic skills for working with optical images. Once you have learnt what SNAP is, what it is for and how to load and open optical images, you need to learn how to perform basic operations with them. First of all, you may need pixel masking, basic index calculation, basic analysis tools, image calculator and thematic processors.</p>
-            <div id="data-import" class="section level2">
-              <h2><span class="header-section-number">2.1.</span> Sea and Land Masking</h2>
-              <p><a href="basic-calc.html#basic-calc">Back to the beginning ⇡</a></p>
-              <p>In this part, we will familiarise ourselves with the elements for masking. Work with masks is carried out through a special window: “Mask manager”. You can open this window through <i>View -> Tool Windows -> Mask Manager</i>.</p>
-              <div>
-                <img src="images/Ref02/MaskManager.png" alt="" />
-                <p class="caption">Mask Manager Window</p>
+              <div id="masking" class="section level2">
+                <h2><span class="header-section-number">2.1.</span> Sea and Land Masking</h2>
+                <p><a href="basic-calc.html#basic-calc">Back to the beginning ⇡</a></p>
+                <p>In this part, we will familiarise ourselves with the elements for masking. Work with masks is carried out through a special window: “Mask manager”. You can open this window through <i>View -> Tool Windows -> Mask Manager</i>.</p>
+                <div>
+                  <img src="images/Ref02/MaskManager.png" alt="" />
+                  <p class="caption">Mask Manager Window</p>
+                </div>
+                <p>In this window you can interact with the image masks. You can customise the visibility of masks by ticking the checkbox in the column <img src="images/Ref02/visibilityColumn.png" alt=""> You can also customise the mask layer name, colour, transparency and description.</p>
+                <p>If you have one mask layer selected, the following options are available <img src="images/Ref02/SingleMaskOptions.png" alt="">These tools allow you to: copy, edit, remove, transfer the selected mask to other products, import, export, zooms to selected masks. If you have multiple layers selected, you can't copy and paste, but you can use the geoprocessing tools <img src="images/Ref02/MultipleMaskOptions.png" alt="">These are the tools that make it possible: creates the union, intersections, the difference (top and down) and complement.</p>
+                <p>You can create your own mask by selecting a polygon with the digitising tool <img src="images/Ref02/NewVectorMask.png" alt="">.</p>
+                <p>Also you can create a mask built over the range of the band <img src="images/Ref02/RangeMaskButton.png" alt="">. The minimum and maximum value of the range is specified here. The brightnesses in the range will be sampled and a mask matching this condition will be created. Raster could be masked by logical mathematical expression <img src="images/Ref02/ExpressionMaskButton.png" alt="">.</p>
+                <div>
+                  <img src="images/Ref02/RangeMaskInterface.png" alt="" width="300px"/>
+                  <p class="caption">Range Mask Creation Window</p>
+                </div>
+                <p>If the imported dataset has not preprocessed land or water masks, SNAP can compute them by integrated tool <i>Land/sea mask</i>. In Processing Parameters choose bands, which will take part in mask computing.</p>
+                <div>
+                  <img src="images/Ref02/LandSeaMaskInterfaca.png" alt="" width="400px"/>
+                  <p class="caption">Land/Sea Mask Window</p>
+                </div>
+                <div>
+                  <img src="images/Ref02/WaterMaskResult.png" alt="" width="400px"/>
+                  <p class="caption">Result of Land/Sea Mask Tool</p>
+                </div>
+
+                <p>You can calculate statistics by mask, using the tool <i>Compute mask area</i></p>
               </div>
-              <p>In this window you can interact with the image masks. You can customise the visibility of masks by ticking the checkbox in the column <img src="images/Ref02/visibilityColumn.png" alt=""> You can also customise the mask layer name, colour, transparency and description.</p>
-              <p>If you have one mask layer selected, the following options are available <img src="images/Ref02/SingleMaskOptions.png" alt="">These tools allow you to: copy, edit, remove, transfer the selected mask to other products, import, export, zooms to selected masks. If you have multiple layers selected, you can't copy and paste, but you can use the geoprocessing tools <img src="images/Ref02/MultipleMaskOptions.png" alt="">These are the tools that make it possible: creates the union, intersections, the difference (top and down) and complement.</p>
-              <p>You can create your own mask by selecting a polygon with the digitising tool <img src="images/Ref02/NewVectorMask.png" alt="">.</p>
-              <p>Also you can create a mask built over the range of the band <img src="images/Ref02/RangeMaskButton.png" alt="">. The minimum and maximum value of the range is specified here. The brightnesses in the range will be sampled and a mask matching this condition will be created. Raster could be masked by logical mathematical expression <img src="images/Ref02/ExpressionMaskButton.png" alt="">.</p>
-              <div>
-                <img src="images/Ref02/RangeMaskInterface.png" alt="" width="300px"/>
-                <p class="caption">Range Mask Creation Window</p>
+              <div id="tools-calc" class="section level2">
+                <h2><span class="header-section-number">2.2.</span> Raster Calculations by SNAP Tools</h2>
+                <p><a href="basic-calc.html#basic-calc">Back to the beginning ⇡</a></p>
+                <p>A frequently used tool in this work is the use and construction of index images. Index images can be part of analyses of various phenomena expressed on the Earth's surface. There are a large number of such indices that engage different spectral channels of images.</p>
+                <p>The indices are located in the tab “optical”, in thematic land processing and thematic sea processing. Consider the vegetation radiometric indices. For example, the second tab has the familiar NDVI vegetation index. To apply the NDVI formula you simply select the red and near infrared channel of the shot in the menu.</p>
+                <div>
+                  <img src="images/Ref02/NDVI.png" alt="" width="300px"/>
+                  <p class="caption">NDVI Tool Window</p>
+                </div>
+                <p>As a result, we get the NDVI image relatively quickly and easily. Using the “Colour manipulation” window we can adjust the colour representation of the image, assigning convenient colours and a range of values.</p>
+                <div>
+                  <img src="images/Ref02/NDVIResult.png" alt=""/>
+                  <p class="caption">Result of NDVI Tool: the greenest areas have more vegetation</p>
+                </div>
+                <p>Another example of SNAP Tools is MSAVI index (Modified Soil Adjusted Vegetation Index), which is calculating by the following formula \(\frac{2 NIR + 1 - \sqrt{(2 NIR + 1)^2 - 8 (NIR - RED)}}{2}\)</p>
+                <p>Pre-prepared formulas are convenient for quick reusability, as well as in multi-step processes built in graph builder (it will be described in the next lessons).</p>
               </div>
-              <p>If the imported dataset has not preprocessed land or water masks, SNAP can compute them by integrated tool <i>Land/sea mask</i>. In Processing Parameters choose bands, which will take part in mask computing.</p>
-              <div>
-                <img src="images/Ref02/LandSeaMaskInterfaca.png" alt="" width="400px"/>
-                <p class="caption">Land/Sea Mask Window</p>
+              <div id="raster-calc" class="section level2">
+                <h2><span class="header-section-number">2.3.</span> Raster Calculations by SNAP Tools</h2>
+                <p><a href="basic-calc.html#basic-calc">Back to the beginning ⇡</a></p>
+                <p>In certain cases, existing indices are not sufficient. There are cases when you need to count non-index images, for example for masking or other operations. The Raster Calculator allows you to perform mathematical operations with image pixels on individual bands. In the SNAP software, this functionality is performed in the Band maths function. You can call this up via the Raster tab.</p>
+                <p>In the main menu you can set general parameters, to write a degeneration you need to go to the expression editing window by clicking on the button. In this window, select the product to which the formula is applied, the data source (i.e., the image channel), and the list of operations (functions, constants, and operators). On the right side you need to enter your expression. It is possible to save and load expressions, so that you don't have to re-enter them, especially if they are frequently used.</p>
+                <div>
+                  <img src="images/Ref02/RasterCalcInterface.png" alt=""/>
+                  <p class="caption">Band Maths Tool and Expression Editor</p>
+                </div>
+                <p>The example above shows the Coloration Index formula \(\frac{RED - BLUE}{RED}\), which is not in the standard toolboxes. Therefore, you must enter the formula yourself. If you plan to use the formula several times, or in ModelBuilder, you can save this formula via the save button. To reuse it, you need to click load and find the location of the file with the formula. The formula is saved with the extension *.txt.</p>
               </div>
+              <div id="analysis-tool" class="section level2">
+                <h2><span class="header-section-number">2.4.</span> Analysis Tools</h2>
+                <p><a href="basic-calc.html#basic-calc">Back to the beginning ⇡</a></p>
+                <p>Basic analytics tools can be useful for deep analysis of satellite imagery, determining decoding features and defining classification algorithm. The analysis tab has the following items:</p>
+                <ol>
+                  <li>
+                    <p><b>Information</b>. The ‘information’ tool outputs various information about the image, which is taken from metadata files</p>
+                    <div>
+                      <img src="images/Ref02/InformationW.png" alt="" width="400px"/>
+                      <p class="caption">Information Window</p>
+                    </div>
+                  </li>
+                  <li>
+                    <p><b>Statistics.</b> This tool outputs statistical information about the raster. Basic statistical parameters are calculated as well as graphs</p>
+                    <div>
+                      <img src="images/Ref02/StatisticsW.png" alt="" />
+                      <p class="caption">Statistics Window</p>
+                    </div>
+                  </li>
+                  <li>
+                    <p><b>Scatter plot.</b> This tool allows you to plot a graph between the values of two images. The graph can help to identify patterns or relationships between different images.</p>
+                    <div>
+                      <img src="images/Ref02/ScatterW.png" alt="" />
+                      <p class="caption">Scatter Plot Window</p>
+                    </div>
+                  </li>
+                  <li>
+                    <p><b>Profile plot.</b> Having created a line, you can plot the brightness of the pixels along which the line passes. You can select a channel and see the differences along the path.</p>
+                    <div>
+                      <img src="images/Ref02/ProfileW.png" alt="" />
+                      <p class="caption">Profile Plot Window</p>
+                    </div>
+                  </li>
+                  <li>
+                    <p><b>Geo-Coding.</b> Displays the geometric properties of the image</p>
+                    <div>
+                      <img src="images/Ref02/GeocodingW.png" alt="" width="400px"/>
+                      <p class="caption">Geo-Coding Window</p>
+                    </div>
+                  </li>
+                  <li>
+                    <p><b>Histogram. </b>The tool creates a histogram of the distribution of the number of pixels by brightness values.</p>
+                    <div>
+                      <img src="images/Ref02/HistogramW.png" alt="" />
+                      <p class="caption">Histogram Window</p>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <div id="thematic-proc" class="section level2">
+                <h2><span class="header-section-number">2.5.</span> Thematic Processors</h2>
+                <p><a href="basic-calc.html#basic-calc">Back to the beginning ⇡</a></p>
+                <p>SNAP software contains toolboxes with special processes such as biophysical, soil, water and others. Using biophysical processes and Landsat data as examples, LAI, FAPAR, FVC can be calculated.</p>
+                <div>
+                  <img src="images/Ref02/BiophysProc.png" alt="" width="400px"/>
+                  <p class="caption">biophysical Processor for LandSat 8 Tool</p>
+                </div>
+                <ul>
+                  <li><b>LAI</b> (Leaf Area Index) is a biophysical indicator that characterises the total amount of leaf area of vegetation per unit of land area. It is expressed as the ratio of the total leaf area (in square metres) to the land area (in square metres) on which the leaves are located. LAI is needed for ecosystem monitoring, agriculture, water management, environmental studies. The LAI calculation is based on NDVI and EVI using empirical coefficients.</li>
+                  <li><b>FAPAR</b> (Fraction of Absorbed Photosynthetically Active Radiation) is a biophysical index that characterises the fraction of photosynthetically active radiation (FAR, range 400-700 nm) absorbed by vegetation for photosynthesis. This index is important for assessing plant productivity and its role in the global carbon cycle. FAPAR indicates how efficiently vegetation absorbs the solar energy needed for photosynthesis.</li>
+                  <li><b>FVC</b> (Fractional Vegetation Cover) is a biophysical index that characterises the proportion of land surface area covered by green vegetation within a given area. It is expressed as a fraction (0 to 1) or as a percentage (0% to 100%). FVC estimates the extent of vegetation cover, ignoring areas occupied by soil, water or other objects. This index is used for agriculture, vegetation monitoring, and natural resource management.</li>
+                </ul>
+              </div>
+              <div id="thematic-proc" class="section level2">
+                <h3>Tasks & Questions</h3>
+                <p>Questions:
+                  <ul>
+                    <li>What methods of masking do you know?</li>
+                    <li>What baseline analysis tools are you aware of and what do they do?</li>
+                    <li>Which group of thematic processes does LAI belong to, what is their essence?</li>
+                  </ul>
+                  Tasks:
+                  Add a new formula to create an index image through expressions and save the tool.
+                  Create a mask for the index image by discarding pixels with smaller or larger values on the threshold.
+                  Create another mask on another tool, find the intersection and export as a vector file.
+                </p>
+              </div>
+              <table>
+                <tbody>
+                <tr class="odd">
+                <td><em>Shiryaev M. et. al</em> <strong>SNAP Course for Specialists</strong>. 
+                  Moscow: Department of Geography, MSU, 2024.</td>
+                </tr>
+                </tbody>
+              </table>
 
             </div>
-
-            
-<table>
-<tbody>
-<tr class="odd">
-<td><em>Shiryaev M. et. al</em> <strong>SNAP Course for Specialists</strong>. 
-  Moscow: Department of Geography, MSU, 2024.</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-            </section>
-
           </div>
+          </section>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="map-math.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
+    <a href="snap-introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+    <a href="map-math.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
   </div>
+</div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
