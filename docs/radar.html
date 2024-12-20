@@ -106,11 +106,105 @@
           <div class="page-inner">
             <section class="normal" id="section-">
             <div id="basic-calc" class="section level1">
-              <h1><span class="header-section-number">Class 5</span> SAR Data Processing</h1>
-              <p>Radar data is an unusual type of data for physical geographers. Despite this, they can be useful for a number of tasks. This is due to the advantage of radar imagery to penetrate through clouds and the ability to survey at night, unlike optical imagery. SNAP is one of the few free software capable of processing radar data. Moreover, SNAP integrates many tools that are sharpened specifically for processing Sentinel-1 open data, making it easier.</p>
-              <p>In this tutorial, you will learn about radar data sources, radar image preprocessing steps, and an example radar data application.</p>
-              <h2>Page is building...</h2>
-              <img src="images/meme.png" alt="">
+                <h1><span class="header-section-number">Class 5</span> SAR Data Processing</h1>
+                <p>Radar data is an unusual type of data for physical geographers. Despite this, they can be useful for a number of tasks. This is due to the advantage of radar imagery to penetrate through clouds and the ability to survey at night, unlike optical imagery. SNAP is one of the few free software capable of processing radar data. Moreover, SNAP integrates many tools that are sharpened specifically for processing Sentinel-1 open data, making it easier.</p>
+                <p>In this tutorial, you will learn about radar data sources, radar image preprocessing steps, and an example radar data application.</p>
+                <div id="sources" class="section level2">
+                    <h2><span class="header-section-number">5.1.</span> Sources of radar data</h2>
+                    <p><a href="sup-class.html">Back to the beginning ⇡</a></p>
+                    <p>The Sentinel-1 program, curated by the European Space Agency, is the only active constellation with open data. The main resource containing Sentinel-1 images is the <a href="https://dataspace.copernicus.eu/">Copernicus Data Space Ecosystem</a>. However, in this task we will use an alternative resource — <a href="https://search.asf.alaska.edu/#/">Alaska Satellite Facility</a>.</p>
+                    <p>Within the framework of the assignment we will estimate the area covered by flooding in the city of Orenburg and its vicinity in April 2024. This will require a summer image of the area as well as during the flood. Unfortunately, images for this area are available up to and including 2021, as the data for this area was supplied by Sentinel-1B satellite, which broke down in December 2021, but Sentinel-1A was imaging the flood as part of the International Charter on Space and Major Disasters (more details can be found in open sources).</p>
+                    <p>To download the imagery to ASF:
+                        <ul>
+                            <li>Draw an extent of the area of interest (Orenburg city)</li>
+                            <li>In Filters section select time range (2021-2024). Additionally, you can use the Seasonal Search option to select the desired months (June-August 2021, April 2024).</li>
+                            <li>In the File Type section, you should select the dual polarization amplitude data (GRD-HD). SLC data is used for interferometric and polarimetric processing and will also be fine, but for the purposes of our task it will suffice</li>
+                            <li>In the Path and Frame Filters section you can select the desired Path and Frame of the image. We will need an April flood image that has Path = 86 and Frame = 165. A summer shot might have Path = 35 and Frame = 420.</li>
+                        </ul>
+                    </p>
+                    <div>
+                        <img src="images/Ref05/AlaskaFilter.png" alt="" />
+                        <p class="caption">Alaska Satellite Facility: Search Filters</p>
+                    </div>
+                    <p>The selected pictures will appear in the downloads. If you have difficulties, you can use the links to download them:
+                        <ul>
+                            <li><a href="https://datapool.asf.alaska.edu/GRD_HD/SB/S1B_IW_GRDH_1SDV_20210627T023213_20210627T023238_027536_03497B_703D.zip">June 2021: link</a></li>
+                            <li><a href="https://datapool.asf.alaska.edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20240409T140745_20240409T140814_053358_06786F_D7C4.zip">April 2024: link 2</a></li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="pre-process" class="section level2">
+                    <h2><span class="header-section-number">5.2.</span> SAR Image pre-processing</h2>
+                    <p><a href="sup-class.html">Back to the beginning ⇡</a></p>
+                    <p>Open images in SNAP and display one of polarizations of any image in the window. Note that the image is not oriented relative to the sides of light - it is recorded in the coordinate system of the radar imagery. To correlate objects on the image, you can use the World View tool, which will display the image extents. Also, geographic coordinates of the point where the cursor is placed are shown in the lower right part of the window. Find the city of Orenburg on the image (it will be the brightest in the central part of the image), and then the flooded areas (dark areas) next to it. Remember the pixel numbers in the corners of the area of interest (flooded areas) - we will need them when cropping the image.</p>
+                    <p>Before working with radar data, the following steps are necessary:
+                        <ol>
+                            <li><p>Raster Subset. Select any area that includes the flooded area so that the number of pixels in the X and Y axes is approximately 5000-6000 (to speed up processing). Enter X coordinates of the leftmost and rightmost pixels, topmost and bottommost pixels in the coordinate input fields, or use the floating window. After cropping the first image, open the second image as well and find the area you cropped, then perform the same procedure with the second image.</p>
+                                <div>
+                                    <img src="images/Ref05/RadarSubset.png" alt="" />
+                                    <p class="caption">Example of Raster Subset Parameters</p>
+                                </div>
+                                <p>Cropped pictures are stored in RAM. Examine the cropped slices and their extents in World View again and make sure you have taken the same area, then the slices can be saved to memory.</p>
+                                <p>After cropping the images, you can open all the channels of the slice. Open the RGB composite (click on the image in Product Explorer - Open RGB Image Window) and display the suggested channel combination in the window. Note which data is located in which channels. Then in the window try to identify different objects on the image.</p>
+                                <div>
+                                    <img src="images/Ref05/RadarSynth.png" alt="" />
+                                    <p class="caption">Example of Raster Synthesis in VV-VH-VV/VH</p>
+                                </div>
+                                <p>Further work with only one of these two images. All tools for working with radar images are located in the Radar section</p>
+                            </li>
+                            <li>Apply Orbit File (Radar - Apply Orbit File). This procedure is necessary to make the image georeferencing more accurate. Try not to skip this step. If an error occurs when loading the orbit file, restart the program. if you have not installed the latest version of the application, then install the latest one;</li>
+                            <li>Remove Thermal Noise (Radar - Radiometic - S1 Thermal Noise Removal). This procedure removes radio noise so that the image is clearer. Leave all settings at their defaults and make sure the Remove Thermal Noise checkbox is active;</li>
+                            <li>Radiometric Calibration (Radar - Radiometic - Calibrate). As a result you should only get Radar cross section data (sigma0 band), the other checkboxes should be deactivated. Also make sure that both input and output channels are fed in both polarizations. ;</li>
+                            <li>Speckle noise filtering (Radar - Speckle Filtering - Single Product Speckle Filter). This procedure is aimed at removing speckle noise - random intensity increases that occur when overlaying a radar signal. Various filters are implemented in the tool, and you can also adjust the floating window size and filter strength. Try using different parameters, compare the results and choose the most successful one</li>
+                            <li>Conversion from dimensionless units to decibels (Raster - Data Convertion - Linear From/To dB). A new channel with amplitude values in decibels will be created in the file.</li>
+                        </ol>
+                    </p>
+                    <p>Pre-processing of the radar image is completed</p>
+                </div>
+                <div id="graph-and-batch" class="section level2">
+                    <h2><span class="header-section-number">5.3.</span> Graph and Batch processing</h2>
+                    <p><a href="sup-class.html">Back to the beginning ⇡</a></p>
+                    <p>Image pre-processing is a standard procedure for conventional processing of amplitude radar image data. In addition, the sequential realization of the processes leaves unnecessary files. Therefore, to speed up the processing, SNAP has a graph processing option. Graph creation is available in the GraphBuilder tool (Processing menu). This allows you to automate processing and to avoid saving intermediate results.</p>
+                    <p>When opened, only file read and write tools are added. Editing a graph in GraphBuilder is done as follows:
+                        <ul>
+                            <li>Nodes with tools are added by PCM from the corresponding sections. Add the tools used as part of the pre-processing (without Subset)</li>
+                            <li>Sequentially connect all tools with arrows and check if the order of the processes is correct</li>
+                            <li>Select the source file in the Read section (second snapshot) and the directory where the file will be saved in the Write section, and correctly set all parameters for each tool. Start the processing</li>
+                            <li>Save the compiled processing graph so that you can use it in the future. The graph will be saved in XML format. In addition, other available graphs can be viewed in the application directory</li>
+                        </ul>
+                    </p>
+                    <div>
+                        <img src="images/Ref05/BuiltGraph.png" alt="" />
+                        <p class="caption">Built Graph</p>
+                    </div>
+                    <p>The Batch Processing tool is also available in the Processing menu. With this tool it is possible to do stream processing of a set of images according to the created graph.</p>
+                </div>
+                <div id="segmentation" class="section level2">
+                    <h2><span class="header-section-number">5.4.</span> SAR Image pre-processing</h2>
+                    <p><a href="sup-class.html">Back to the beginning ⇡</a></p>
+                    <p>After these manipulations two images can be merged into one multitemporal image. Radar images can be combined by orbit parameters (Radar - Coregistration - Stack Tools - Create Stack). In this case it is necessary that Initial Offset Method should be based on orbit data.</p>
+                    <div>
+                        <img src="images/Ref05/StackInterface.png" alt="" />
+                        <p class="caption">Stack Interface</p>
+                    </div>
+                    <p>As a result of merging two images, one of them will become the master image and the other will become the slave image. Display a multi-channel image in the window, where the red channel will contain the image before the flood, the green channel will contain the image after the flood, and the blue channel will contain the image after the flood. As a result, the resulting image will show flooded areas in dark red color.</p>
+                    <div>
+                        <img src="images/Ref05/StackResult.png" alt="" />
+                        <p class="caption">Stack Result</p>
+                    </div>
+                    <p>Search the brightness values in decibels, and then mask the flooded areas by segmenting the values from the two channels. Add the resulting mask (it will appear in the masks section) to a new channel via the raster calculator.</p>
+                    <div>
+                        <img src="images/Ref05/Brightness.png" alt="" />
+                    </div>
+                </div>
+                <div id="segmentation" class="section level2">
+                    <h2><span class="header-section-number">5.4.</span> SAR Image pre-processing</h2>
+                    <p><a href="sup-class.html">Back to the beginning ⇡</a></p>
+                    <p>In order to georeference radar images from the survey system projection to the map system projection, it is necessary to perform geocoding procedure. In the process of geocoding the reference DEM is also used, which is necessary to eliminate geometric distortions. It is recommended to perform this operation always in the last turn, because as a result of this operation images have artifacts.</p>
+                    <div>
+                        <img src="images/Ref05/Geocoded.png" alt="" />
+                    </div>
+                </div>
               <table>
                 <tbody>
                 <tr class="odd">
@@ -126,8 +220,7 @@
         </div>
       </div>
     </div>
-    <a href="snap-introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-    <a href="map-math.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    <a href="sup-class.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
   </div>
 </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
