@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/SNAP_icon-400x400.jpg" />
     <link rel="shortcut icon" href="images/SNAP_icon-400x400.jpg" type="image/x-icon" />
-    <link rel="next" href="map-topo.html"/>
+    <link rel="next" href="sup-class.html"/>
   <script src="libs/jquery-2.2.3/jquery.min.js"></script>
   <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
   <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -63,13 +63,13 @@
             </ul>
           </li>
           <li class="chapter" data-level="3" data-path="multitemporal.html"><a href="multitemporal.html"><i class="fa fa-check"></i><b>3</b> Multitemporal Synthesis and Image clustering</a>
-            <!-- <ul>
-              <li class="chapter" data-level="2.1" data-path="basic-calc.html"><a href="basic-calc.html#masking"><i class="fa fa-check"></i><b>2.1</b> Sea and land masking</a></li>
-              <li class="chapter" data-level="2.2" data-path="basic-calc.html"><a href="basic-calc.html#tools-calc"><i class="fa fa-check"></i><b>2.2</b> Raster Calculations by SNAP Tools</a></li>
-              <li class="chapter" data-level="2.3" data-path="basic-calc.html"><a href="basic-calc.html#raster-calc"><i class="fa fa-check"></i><b>2.3</b> Raster Calculator</a></li>
-              <li class="chapter" data-level="2.4" data-path="basic-calc.html"><a href="basic-calc.html#analysis-tool"><i class="fa fa-check"></i><b>2.4</b> Analysis Tools</a></li>
-              <li class="chapter" data-level="2.5" data-path="basic-calc.html"><a href="basic-calc.html#thematic-proc"><i class="fa fa-check"></i><b>2.5</b> Thematic Processors</a></li>
-            </ul> -->
+            <ul>
+              <li class="chapter" data-level="3.1" data-path="multitemporal.html"><a href="multitemporal.html#multitemp-images"><i class="fa fa-check"></i><b>3.1</b> Downloading Multitemporal Images</a></li>
+              <!-- <li class="chapter" data-level="2.2" data-path="basic-calc.html"><a href="basic-calc.html#tools-calc"><i class="fa fa-check"></i><b>2.2</b> Raster Calculations by SNAP Tools</a></li> -->
+              <!-- <li class="chapter" data-level="2.3" data-path="basic-calc.html"><a href="basic-calc.html#raster-calc"><i class="fa fa-check"></i><b>2.3</b> Raster Calculator</a></li> -->
+              <!-- <li class="chapter" data-level="2.4" data-path="basic-calc.html"><a href="basic-calc.html#analysis-tool"><i class="fa fa-check"></i><b>2.4</b> Analysis Tools</a></li> -->
+              <!-- <li class="chapter" data-level="2.5" data-path="basic-calc.html"><a href="basic-calc.html#thematic-proc"><i class="fa fa-check"></i><b>2.5</b> Thematic Processors</a></li> -->
+            </ul>
           </li>
           <li class="chapter" data-level="4" data-path="sup-class.html"><a href="sup-class.html"><i class="fa fa-check"></i><b>4</b> Supervised Classification</a>
             <ul>
@@ -114,6 +114,21 @@
                   <li>Clustering of optical images.</li>
                 </ol>
               </p>
+              <div id="multitemp-images" class="section level2">
+                <h2><span class="header-section-number">5.1.</span> Sources of radar data</h2>
+                <p><a href="sup-class.html">Back to the beginning ⇡</a></p>
+                <p>Resource satellites provide cyclic scanning of the Earth surface. So, for an ideal multitemporal stack we need images with single extents and bands, and therefore a single satellite system.</p>
+                <p>Both Landsat and Sentinel have a single row and column indexing for each system. So, all images on the intersection of row and column have a unique and constant extent. The scheme of scenes are published on the Satellites Images Operators Sites.</p>
+                <p>Downloading the Images was carried out by Earth Explorer Search manager. We use the Date Range Filter to select only August images. So, in your work you can use any months. It is proper to use the same month for all downloaded images.</p>
+                <div>
+                  <img src="images/Ref03/SearchArea.png" alt="" />
+                  <p class="caption">Area of Interest for Multitemporal Analysis</p>
+                </div>
+                <p>Here are the names of downloaded images! We will use data from 2002 year (Landsat-7 Image), 2014, 2024 years (Landsat-8).</p>
+                <div>
+                  <img src="images/Ref03/FileNames.png" alt="" />
+                </div>
+              </div>
               <h2>Page is building...</h2>
               <img src="images/meme.png" alt="">
               <table>
